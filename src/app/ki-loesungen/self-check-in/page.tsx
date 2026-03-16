@@ -115,21 +115,20 @@ export default function SelfCheckInPage() {
   return (
     <>
       {/* ─── Hero ─── */}
-      <section className="relative pt-36 pb-20 bg-gradient-to-br from-midnight via-void to-abyss overflow-hidden">
+      <section className="relative pt-28 pb-14 bg-gradient-to-br from-midnight via-void to-abyss overflow-hidden">
         <div className="absolute inset-0 dot-grid opacity-40" />
         <div className="absolute top-40 right-[10%] w-80 h-80 rounded-full bg-violet/8 blur-3xl" />
 
-        <div className="relative z-10 mx-auto max-w-7xl px-6 lg:px-8">
-          <div className="max-w-3xl">
+        <div className="relative z-10 mx-auto max-w-7xl px-6 lg:px-8 text-center">
+          <div className="max-w-3xl mx-auto">
             <p className="text-sm font-semibold uppercase tracking-widest text-violet mb-4">
               Produktdetails
             </p>
-            <h1 className="font-display text-5xl lg:text-6xl tracking-tight text-white mb-6">
-              Self-Check-In Terminal
-              <br />
+            <h1 className="font-display text-3xl lg:text-4xl tracking-tight text-white mb-6">
+              Self-Check-In Terminal{" "}
               <span className="gradient-text">für Patienten</span>
             </h1>
-            <p className="text-lg text-white/50 leading-relaxed max-w-2xl">
+            <p className="text-lg text-white/50 leading-relaxed max-w-2xl mx-auto">
               Ermöglichen Sie einen schnellen, kontaktarmen und intuitiven
               Praxisempfang. Die Touchscreen-basierte Selbstanmeldung ist
               speziell für den medizinischen Einsatz konzipiert: klar
@@ -142,13 +141,13 @@ export default function SelfCheckInPage() {
       </section>
 
       {/* ─── Benefits ─── */}
-      <section className="py-24 lg:py-32 bg-snow">
+      <section className="py-16 lg:py-20 bg-snow">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
-          <div className="text-center mb-16">
+          <div className="text-center mb-10">
             <p className="text-sm font-semibold uppercase tracking-widest text-violet mb-3">
               Vorteile
             </p>
-            <h2 className="font-display text-4xl lg:text-5xl tracking-tight text-midnight">
+            <h2 className="font-display text-2xl lg:text-3xl tracking-tight text-midnight">
               Warum Self-Check-In?
             </h2>
           </div>
@@ -175,15 +174,15 @@ export default function SelfCheckInPage() {
       </section>
 
       {/* ─── Technical Features ─── */}
-      <section className="relative py-24 lg:py-32 bg-gradient-to-br from-midnight to-void overflow-hidden">
+      <section className="relative py-16 lg:py-20 bg-gradient-to-br from-midnight to-void overflow-hidden">
         <div className="absolute inset-0 dot-grid opacity-30" />
 
         <div className="relative z-10 mx-auto max-w-7xl px-6 lg:px-8">
-          <div className="text-center mb-16">
+          <div className="text-center mb-10">
             <p className="text-sm font-semibold uppercase tracking-widest text-violet mb-3">
               Technische Details
             </p>
-            <h2 className="font-display text-4xl lg:text-5xl tracking-tight text-white">
+            <h2 className="font-display text-2xl lg:text-3xl tracking-tight text-white">
               Systemfunktionen
             </h2>
             <p className="mt-4 text-lg text-white/40 max-w-2xl mx-auto">
@@ -221,14 +220,14 @@ export default function SelfCheckInPage() {
       </section>
 
       {/* ─── Architecture ─── */}
-      <section className="py-24 lg:py-32 bg-snow">
+      <section className="py-16 lg:py-20 bg-snow">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div>
               <p className="text-sm font-semibold uppercase tracking-widest text-violet mb-3">
                 Architektur
               </p>
-              <h2 className="font-display text-4xl tracking-tight text-midnight mb-6">
+              <h2 className="font-display text-2xl tracking-tight text-midnight mb-6">
                 Systemarchitektur
               </h2>
               <p className="text-lg text-midnight/50 leading-relaxed mb-6">
@@ -285,15 +284,15 @@ export default function SelfCheckInPage() {
       </section>
 
       {/* ─── Hardware ─── */}
-      <section className="relative py-24 lg:py-32 bg-gradient-to-br from-void to-midnight overflow-hidden">
+      <section className="relative py-16 lg:py-20 bg-gradient-to-br from-void to-midnight overflow-hidden">
         <div className="absolute inset-0 dot-grid opacity-30" />
 
         <div className="relative z-10 mx-auto max-w-7xl px-6 lg:px-8">
-          <div className="text-center mb-16">
+          <div className="text-center mb-10">
             <p className="text-sm font-semibold uppercase tracking-widest text-violet mb-3">
               Hardware
             </p>
-            <h2 className="font-display text-4xl lg:text-5xl tracking-tight text-white">
+            <h2 className="font-display text-2xl lg:text-3xl tracking-tight text-white">
               Terminal-Spezifikationen
             </h2>
             <p className="mt-4 text-lg text-white/40 max-w-2xl mx-auto">
@@ -323,7 +322,7 @@ export default function SelfCheckInPage() {
       {/* ─── CTA ─── */}
       <section className="py-24 bg-snow">
         <div className="mx-auto max-w-3xl px-6 text-center">
-          <h2 className="font-display text-4xl tracking-tight text-midnight mb-6">
+          <h2 className="font-display text-2xl tracking-tight text-midnight mb-6">
             Self-Check-In live erleben
           </h2>
           <p className="text-lg text-midnight/50 mb-10">
@@ -332,7 +331,7 @@ export default function SelfCheckInPage() {
           </p>
           <Link
             href="/kontakt"
-            className="group inline-flex items-center gap-2 bg-violet hover:bg-iris text-white px-8 py-4 rounded-full font-semibold text-lg transition-all duration-300 hover:shadow-[0_0_32px_rgba(103,61,230,0.4)] hover:-translate-y-0.5"
+            className="group inline-flex items-center gap-2 bg-violet hover:bg-iris text-white px-8 py-4 rounded-full font-semibold text-lg transition-all duration-300 hover:shadow-[0_0_32px_rgba(46,125,142,0.4)] hover:-translate-y-0.5"
           >
             Demo vereinbaren
             <ArrowRight className="w-5 h-5 transition-transform group-hover:translate-x-1" />

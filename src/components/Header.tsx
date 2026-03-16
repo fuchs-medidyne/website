@@ -2,18 +2,24 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { Menu, X, ChevronDown } from "lucide-react";
+import { getVisibleModules } from "@/data/modules";
+
+const visibleModules = getVisibleModules();
 
 const navItems = [
   { label: "Startseite", href: "/" },
   { label: "Über uns", href: "/ueber-uns" },
   {
-    label: "KI Lösungen",
+    label: "Lösungen",
     href: "/ki-loesungen",
     children: [
       { label: "Übersicht", href: "/ki-loesungen" },
-      { label: "Self-Check-In Terminal", href: "/ki-loesungen/self-check-in" },
+      ...visibleModules
+        .filter((m) => m.detailPage)
+        .map((m) => ({ label: m.name, href: m.detailPage! })),
     ],
   },
 ];
@@ -40,26 +46,22 @@ export default function Header() {
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
-        scrolled
-          ? "bg-midnight/92 backdrop-blur-2xl shadow-[0_4px_32px_rgba(15,10,31,0.5)]"
-          : "bg-transparent"
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-white ${
+        scrolled ? "shadow-md shadow-midnight/5" : "shadow-sm shadow-midnight/3"
       }`}
     >
       <nav className="mx-auto max-w-7xl px-6 lg:px-8">
-        <div className="flex h-18 items-center justify-between">
+        <div className="flex h-16 items-center justify-between">
           {/* Logo */}
-          <Link
-            href="/"
-            className="group flex items-center gap-0.5 text-2xl tracking-tight"
-          >
-            <span className="font-display text-white transition-colors">
-              EmMa
-            </span>
-            <span className="text-violet font-display transition-transform group-hover:scale-110 inline-block">
-              .
-            </span>
-            <span className="font-display text-white">AI</span>
+          <Link href="/" className="shrink-0">
+            <Image
+              src="/images/logo_medidyne.png"
+              alt="Medidyne Systems"
+              width={200}
+              height={50}
+              className="h-9 w-auto"
+              priority
+            />
           </Link>
 
           {/* Desktop Nav */}
@@ -75,8 +77,8 @@ export default function Header() {
                   <button
                     className={`flex items-center gap-1 px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200 ${
                       isActive(item.href)
-                        ? "text-white bg-white/10"
-                        : "text-white/65 hover:text-white hover:bg-white/5"
+                        ? "text-violet bg-violet/5"
+                        : "text-midnight/60 hover:text-midnight hover:bg-midnight/3"
                     }`}
                   >
                     {item.label}
@@ -94,15 +96,15 @@ export default function Header() {
                         : "opacity-0 -translate-y-2 pointer-events-none"
                     }`}
                   >
-                    <div className="glass rounded-xl p-1.5 min-w-[220px] shadow-2xl shadow-midnight/50">
+                    <div className="bg-white rounded-xl p-1.5 min-w-[220px] shadow-xl shadow-midnight/8 border border-midnight/5">
                       {item.children.map((child) => (
                         <Link
                           key={child.href}
                           href={child.href}
                           className={`block px-4 py-2.5 rounded-lg text-sm transition-all duration-150 ${
                             isActive(child.href)
-                              ? "text-white bg-violet/20"
-                              : "text-white/65 hover:text-white hover:bg-white/8"
+                              ? "text-violet bg-violet/5"
+                              : "text-midnight/60 hover:text-midnight hover:bg-midnight/3"
                           }`}
                         >
                           {child.label}
@@ -117,8 +119,8 @@ export default function Header() {
                   href={item.href}
                   className={`px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200 ${
                     isActive(item.href)
-                      ? "text-white bg-white/10"
-                      : "text-white/65 hover:text-white hover:bg-white/5"
+                      ? "text-violet bg-violet/5"
+                      : "text-midnight/60 hover:text-midnight hover:bg-midnight/3"
                   }`}
                 >
                   {item.label}
@@ -128,7 +130,7 @@ export default function Header() {
 
             <Link
               href="/kontakt"
-              className="ml-4 inline-flex items-center gap-2 bg-violet hover:bg-iris text-white px-5 py-2.5 rounded-full text-sm font-semibold transition-all duration-300 hover:shadow-[0_0_24px_rgba(103,61,230,0.4)] hover:-translate-y-0.5"
+              className="ml-4 inline-flex items-center gap-2 bg-violet hover:bg-iris text-white px-5 py-2.5 rounded-full text-sm font-semibold transition-all duration-300 hover:shadow-[0_0_24px_rgba(46,125,142,0.3)] hover:-translate-y-0.5"
             >
               Kontakt
             </Link>
@@ -137,7 +139,7 @@ export default function Header() {
           {/* Mobile Toggle */}
           <button
             onClick={() => setMobileOpen(!mobileOpen)}
-            className="lg:hidden relative z-50 w-10 h-10 flex items-center justify-center rounded-lg text-white hover:bg-white/10 transition-colors"
+            className="lg:hidden relative z-50 w-10 h-10 flex items-center justify-center rounded-lg text-midnight hover:bg-midnight/5 transition-colors"
             aria-label="Navigation öffnen"
           >
             {mobileOpen ? (
@@ -158,18 +160,18 @@ export default function Header() {
         }`}
       >
         <div
-          className="absolute inset-0 bg-midnight/98 backdrop-blur-2xl"
+          className="absolute inset-0 bg-white/98 backdrop-blur-2xl"
           onClick={() => setMobileOpen(false)}
         />
-        <div className="relative z-10 flex flex-col pt-24 px-8 gap-2">
+        <div className="relative z-10 flex flex-col pt-20 px-8 gap-1">
           {navItems.map((item) => (
             <div key={item.label}>
               <Link
                 href={item.href}
-                className={`block px-4 py-3.5 rounded-xl text-lg font-medium transition-colors ${
+                className={`block px-4 py-3 rounded-xl text-lg font-medium transition-colors ${
                   isActive(item.href)
-                    ? "text-white bg-white/10"
-                    : "text-white/60 hover:text-white hover:bg-white/5"
+                    ? "text-violet bg-violet/5"
+                    : "text-midnight/60 hover:text-midnight hover:bg-midnight/3"
                 }`}
               >
                 {item.label}
@@ -178,10 +180,10 @@ export default function Header() {
                 <Link
                   key={child.href}
                   href={child.href}
-                  className={`block px-8 py-3 rounded-xl text-base transition-colors ${
+                  className={`block px-8 py-2.5 rounded-xl text-base transition-colors ${
                     isActive(child.href)
                       ? "text-violet"
-                      : "text-white/40 hover:text-white/70"
+                      : "text-midnight/40 hover:text-midnight/70"
                   }`}
                 >
                   {child.label}
@@ -191,7 +193,7 @@ export default function Header() {
           ))}
           <Link
             href="/kontakt"
-            className="mt-6 inline-flex items-center justify-center bg-violet text-white px-6 py-3.5 rounded-full text-base font-semibold"
+            className="mt-4 inline-flex items-center justify-center bg-violet text-white px-6 py-3 rounded-full text-base font-semibold"
           >
             Kontakt aufnehmen
           </Link>

@@ -19,20 +19,19 @@ export default function KontaktPage() {
   return (
     <>
       {/* ─── Hero ─── */}
-      <section className="relative pt-36 pb-16 bg-gradient-to-br from-midnight via-void to-abyss overflow-hidden">
+      <section className="relative pt-28 pb-12 bg-gradient-to-br from-midnight via-void to-abyss overflow-hidden">
         <div className="absolute inset-0 dot-grid opacity-40" />
 
-        <div className="relative z-10 mx-auto max-w-7xl px-6 lg:px-8">
-          <div className="max-w-2xl">
+        <div className="relative z-10 mx-auto max-w-7xl px-6 lg:px-8 text-center">
+          <div className="max-w-3xl mx-auto">
             <p className="text-sm font-semibold uppercase tracking-widest text-violet mb-4">
               Kontakt
             </p>
-            <h1 className="font-display text-5xl lg:text-6xl tracking-tight text-white mb-6">
-              Kontaktieren
-              <br />
+            <h1 className="font-display text-3xl lg:text-4xl tracking-tight text-white mb-6">
+              Kontaktieren{" "}
               <span className="gradient-text">Sie uns</span>
             </h1>
-            <p className="text-lg text-white/50 leading-relaxed">
+            <p className="text-lg text-white/50 leading-relaxed max-w-2xl mx-auto">
               Wir freuen uns auf Ihre Anfrage und stellen Ihnen gerne unsere
               Lösungen vor, um Verwaltungsaufgaben in Ihrer Arztpraxis zu
               automatisieren.
@@ -44,7 +43,7 @@ export default function KontaktPage() {
       </section>
 
       {/* ─── Form + Contact Info ─── */}
-      <section className="py-24 bg-snow">
+      <section className="py-16 bg-snow">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-16">
             {/* Form */}
@@ -156,7 +155,7 @@ export default function KontaktPage() {
                   <button
                     type="submit"
                     disabled={sending}
-                    className="group inline-flex items-center gap-2 bg-violet hover:bg-iris disabled:bg-violet/50 text-white px-8 py-4 rounded-full font-semibold transition-all duration-300 hover:shadow-[0_0_32px_rgba(103,61,230,0.4)] hover:-translate-y-0.5 disabled:hover:translate-y-0 disabled:cursor-not-allowed"
+                    className="group inline-flex items-center gap-2 bg-violet hover:bg-iris disabled:bg-violet/50 text-white px-8 py-4 rounded-full font-semibold transition-all duration-300 hover:shadow-[0_0_32px_rgba(46,125,142,0.4)] hover:-translate-y-0.5 disabled:hover:translate-y-0 disabled:cursor-not-allowed"
                   >
                     {sending ? (
                       <>

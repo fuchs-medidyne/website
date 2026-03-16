@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import { Users, Heart, TrendingUp } from "lucide-react";
 
 export const metadata: Metadata = {
@@ -13,21 +14,21 @@ const team = [
     role: "CEO",
     description:
       "Strategische Unternehmensführung und Geschäftsentwicklung mit Fokus auf nachhaltige Digitalisierungslösungen im Gesundheitswesen.",
-    initials: "EW",
+    image: "https://placehold.co/400x400/0F2A33/4DA3B5?text=Foto%0AEduard+Warth",
   },
   {
     name: "Bettina Schindler",
     role: "CTO",
     description:
       "Technologische Vision und Produktentwicklung. Verantwortlich für die KI-Architektur und cloudbasierte Infrastruktur.",
-    initials: "BS",
+    image: "https://placehold.co/400x400/0F2A33/4DA3B5?text=Foto%0ABettina+Schindler",
   },
   {
     name: "Dr. Christian Fuchs",
     role: "COO",
     description:
       "Operative Leitung und Qualitätssicherung. Medizinische Expertise für praxisnahe, bedarfsgerechte Lösungen.",
-    initials: "CF",
+    image: "https://placehold.co/400x400/0F2A33/4DA3B5?text=Foto%0ADr.+Christian+Fuchs",
   },
 ];
 
@@ -56,21 +57,20 @@ export default function UeberUnsPage() {
   return (
     <>
       {/* ─── Hero ─── */}
-      <section className="relative pt-36 pb-20 bg-gradient-to-br from-midnight via-void to-abyss overflow-hidden">
+      <section className="relative pt-28 pb-14 bg-gradient-to-br from-midnight via-void to-abyss overflow-hidden">
         <div className="absolute inset-0 dot-grid opacity-40" />
         <div className="absolute top-32 right-[20%] w-64 h-64 rounded-full bg-violet/8 blur-3xl" />
 
-        <div className="relative z-10 mx-auto max-w-7xl px-6 lg:px-8">
-          <div className="max-w-3xl">
+        <div className="relative z-10 mx-auto max-w-7xl px-6 lg:px-8 text-center">
+          <div className="max-w-3xl mx-auto">
             <p className="text-sm font-semibold uppercase tracking-widest text-violet mb-4">
               Über uns
             </p>
-            <h1 className="font-display text-5xl lg:text-6xl tracking-tight text-white mb-6">
-              Prozessdigitalisierung
-              <br />
+            <h1 className="font-display text-3xl lg:text-4xl tracking-tight text-white mb-6">
+              Prozessdigitalisierung{" "}
               <span className="gradient-text">und Automatisierung</span>
             </h1>
-            <p className="text-lg text-white/50 leading-relaxed max-w-2xl">
+            <p className="text-lg text-white/50 leading-relaxed max-w-2xl mx-auto">
               Die Medidyne Systems GmbH setzt KI ein, um Verwaltungsaufgaben
               in Arztpraxen zu automatisieren. Unser Expertenteam entlastet
               medizinisches Personal und verbessert die Patientenversorgung
@@ -83,13 +83,13 @@ export default function UeberUnsPage() {
       </section>
 
       {/* ─── Team ─── */}
-      <section className="py-24 lg:py-32 bg-snow">
+      <section className="py-16 lg:py-20 bg-snow">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
-          <div className="text-center mb-16">
+          <div className="text-center mb-10">
             <p className="text-sm font-semibold uppercase tracking-widest text-violet mb-3">
               Unser Team
             </p>
-            <h2 className="font-display text-4xl lg:text-5xl tracking-tight text-midnight">
+            <h2 className="font-display text-2xl lg:text-3xl tracking-tight text-midnight">
               Interdisziplinäre Expertise
             </h2>
             <p className="mt-4 text-lg text-midnight/50 max-w-2xl mx-auto">
@@ -104,11 +104,15 @@ export default function UeberUnsPage() {
                 key={member.name}
                 className="group text-center p-8 rounded-2xl bg-white border border-violet/5 shadow-sm hover:shadow-xl hover:shadow-violet/5 transition-all duration-500 hover:-translate-y-1"
               >
-                {/* Avatar */}
-                <div className="mx-auto w-24 h-24 rounded-2xl bg-gradient-to-br from-violet to-iris flex items-center justify-center mb-6 group-hover:scale-105 transition-transform duration-500">
-                  <span className="text-2xl font-bold text-white">
-                    {member.initials}
-                  </span>
+                {/* Portrait */}
+                <div className="mx-auto w-28 h-28 rounded-2xl overflow-hidden mb-6 group-hover:scale-105 transition-transform duration-500">
+                  <Image
+                    src={member.image}
+                    alt={member.name}
+                    width={400}
+                    height={400}
+                    className="w-full h-full object-cover"
+                  />
                 </div>
 
                 <h3 className="text-xl font-semibold text-midnight">
@@ -126,16 +130,31 @@ export default function UeberUnsPage() {
         </div>
       </section>
 
+      {/* ─── Unternehmensbild ─── */}
+      <section className="bg-snow">
+        <div className="mx-auto max-w-7xl px-6 lg:px-8">
+          <div className="relative rounded-2xl overflow-hidden">
+            <Image
+              src="https://placehold.co/1400x350/0F2A33/4DA3B5?text=Bild%3A+Team+bei+der+Arbeit+%2F+Büro+Medidyne+Systems"
+              alt="Medidyne Systems Team"
+              width={1400}
+              height={350}
+              className="w-full h-auto object-cover"
+            />
+          </div>
+        </div>
+      </section>
+
       {/* ─── Values ─── */}
-      <section className="relative py-24 lg:py-32 bg-gradient-to-br from-midnight to-void overflow-hidden">
+      <section className="relative py-16 lg:py-20 bg-gradient-to-br from-midnight to-void overflow-hidden">
         <div className="absolute inset-0 dot-grid opacity-30" />
 
         <div className="relative z-10 mx-auto max-w-7xl px-6 lg:px-8">
-          <div className="text-center mb-16">
+          <div className="text-center mb-10">
             <p className="text-sm font-semibold uppercase tracking-widest text-violet mb-3">
               Unsere Werte
             </p>
-            <h2 className="font-display text-4xl lg:text-5xl tracking-tight text-white">
+            <h2 className="font-display text-2xl lg:text-3xl tracking-tight text-white">
               Woran wir glauben
             </h2>
           </div>
@@ -162,9 +181,9 @@ export default function UeberUnsPage() {
       </section>
 
       {/* ─── Philosophy ─── */}
-      <section className="py-24 lg:py-32 bg-snow">
+      <section className="py-16 lg:py-20 bg-snow">
         <div className="mx-auto max-w-3xl px-6 lg:px-8 text-center">
-          <h2 className="font-display text-4xl tracking-tight text-midnight mb-6">
+          <h2 className="font-display text-2xl tracking-tight text-midnight mb-6">
             Nachhaltige SaaS-Lösungen
           </h2>
           <p className="text-lg text-midnight/55 leading-relaxed mb-6">

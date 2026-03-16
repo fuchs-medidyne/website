@@ -1,18 +1,10 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import {
-  Cloud,
-  ArrowRight,
-  CheckCircle,
-  Stethoscope,
-  Monitor,
-  Server,
-  Wrench,
-  RefreshCcw,
-} from "lucide-react";
+import { Cloud, ArrowRight, CheckCircle } from "lucide-react";
+import { getVisibleModules } from "@/data/modules";
 
 export const metadata: Metadata = {
-  title: "KI Lösungen",
+  title: "Lösungen",
   description:
     "Cloudbasierte Praxissoftware als Service — hohe Verfügbarkeit, zentrale Wartung und stets aktuelle Software für Ihre Arztpraxis.",
 };
@@ -26,54 +18,27 @@ const benefits = [
   "Browserbasierter Zugriff — keine Installation nötig",
 ];
 
-const solutions = [
-  {
-    icon: Stethoscope,
-    title: "Arzt-Patienten-Gespräch",
-    description:
-      "Unser System unterstützt Ärzte durch automatische Dokumentation und Berichterstellung. So können Sie sich vollständig dem Patienten widmen — die Dokumentation läuft im Hintergrund.",
-  },
-  {
-    icon: Monitor,
-    title: "Self-Check-In für Patienten",
-    description:
-      "Digitale Anmeldung über cloudbasierte Terminals mit konfigurierbaren Check-In-Prozessen. Entlastung des Empfangsteams und optimierte Patientenführung.",
-    link: "/ki-loesungen/self-check-in",
-  },
-  {
-    icon: Server,
-    title: "Zentrale Verwaltung",
-    description:
-      "Mehrstufige Benutzer- und Rollenverwaltung über ein zentrales Dashboard. Administrator, Arzt und MFA — jede Rolle mit passenden Berechtigungen.",
-  },
-  {
-    icon: RefreshCcw,
-    title: "Kontinuierliche Updates",
-    description:
-      "Als SaaS-Lösung erhalten Sie automatische Updates mit neuen Funktionen und Verbesserungen. Kein manuelles Update nötig.",
-  },
-];
-
 export default function KiLoesungenPage() {
+  const visibleModules = getVisibleModules();
+
   return (
     <>
       {/* ─── Hero ─── */}
-      <section className="relative pt-36 pb-20 bg-gradient-to-br from-midnight via-void to-abyss overflow-hidden">
+      <section className="relative pt-28 pb-14 bg-gradient-to-br from-midnight via-void to-abyss overflow-hidden">
         <div className="absolute inset-0 dot-grid opacity-40" />
         <div className="absolute bottom-20 left-[15%] w-72 h-72 rounded-full bg-violet/8 blur-3xl" />
 
-        <div className="relative z-10 mx-auto max-w-7xl px-6 lg:px-8">
-          <div className="max-w-3xl">
+        <div className="relative z-10 mx-auto max-w-7xl px-6 lg:px-8 text-center">
+          <div className="max-w-3xl mx-auto">
             <p className="text-sm font-semibold uppercase tracking-widest text-violet mb-4">
-              Unsere Lösungen
+              EmMa Plattform
             </p>
-            <h1 className="font-display text-5xl lg:text-6xl tracking-tight text-white mb-6">
-              Cloudbasierte Praxissoftware
-              <br />
+            <h1 className="font-display text-3xl lg:text-4xl tracking-tight text-white mb-6">
+              Cloudbasierte Praxissoftware{" "}
               <span className="gradient-text">als Service</span>
             </h1>
-            <p className="text-lg text-white/50 leading-relaxed max-w-2xl">
-              Unsere Software-as-a-Service-Lösung wurde speziell für
+            <p className="text-lg text-white/50 leading-relaxed max-w-2xl mx-auto">
+              EmMa ist eine modulare Cloud-Plattform, speziell für
               medizinische Einrichtungen konzipiert — mit höchsten
               Ansprüchen an Sicherheit, Verfügbarkeit und
               Benutzerfreundlichkeit.
@@ -85,7 +50,7 @@ export default function KiLoesungenPage() {
       </section>
 
       {/* ─── Benefits ─── */}
-      <section className="py-24 lg:py-32 bg-snow">
+      <section className="py-16 lg:py-20 bg-snow">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div>
@@ -93,7 +58,7 @@ export default function KiLoesungenPage() {
                 <Cloud className="w-4 h-4" />
                 SaaS-Plattform
               </div>
-              <h2 className="font-display text-4xl tracking-tight text-midnight mb-6">
+              <h2 className="font-display text-2xl tracking-tight text-midnight mb-6">
                 Ihre Vorteile auf einen Blick
               </h2>
               <p className="text-lg text-midnight/50 leading-relaxed mb-8">
@@ -120,39 +85,39 @@ export default function KiLoesungenPage() {
         </div>
       </section>
 
-      {/* ─── Solutions Grid ─── */}
-      <section className="relative py-24 lg:py-32 bg-gradient-to-br from-midnight to-void overflow-hidden">
+      {/* ─── Module Grid (dynamisch aus modules.ts) ─── */}
+      <section className="relative py-16 lg:py-20 bg-gradient-to-br from-midnight to-void overflow-hidden">
         <div className="absolute inset-0 dot-grid opacity-30" />
 
         <div className="relative z-10 mx-auto max-w-7xl px-6 lg:px-8">
-          <div className="text-center mb-16">
+          <div className="text-center mb-10">
             <p className="text-sm font-semibold uppercase tracking-widest text-violet mb-3">
-              Funktionsbereiche
+              EmMa Module
             </p>
-            <h2 className="font-display text-4xl lg:text-5xl tracking-tight text-white">
-              Unsere Kernmodule
+            <h2 className="font-display text-2xl lg:text-3xl tracking-tight text-white">
+              Unsere Module im Überblick
             </h2>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {solutions.map((sol) => (
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            {visibleModules.map((mod) => (
               <div
-                key={sol.title}
-                className="group glass rounded-2xl p-8 hover:bg-white/8 transition-all duration-500"
+                key={mod.id}
+                className="group glass rounded-2xl p-7 hover:bg-white/8 transition-all duration-500 flex flex-col"
               >
-                <div className="w-12 h-12 rounded-xl bg-violet/15 flex items-center justify-center mb-6">
-                  <sol.icon className="w-6 h-6 text-violet" />
+                <div className="w-11 h-11 rounded-xl bg-violet/15 flex items-center justify-center mb-5">
+                  <mod.icon className="w-5 h-5 text-violet" />
                 </div>
-                <h3 className="text-xl font-semibold text-white mb-3">
-                  {sol.title}
+                <h3 className="text-lg font-semibold text-white mb-2">
+                  {mod.name}
                 </h3>
-                <p className="text-sm text-white/40 leading-relaxed mb-4">
-                  {sol.description}
+                <p className="text-sm text-white/40 leading-relaxed mb-4 flex-1">
+                  {mod.summary}
                 </p>
-                {sol.link && (
+                {mod.detailPage && (
                   <Link
-                    href={sol.link}
-                    className="inline-flex items-center gap-1.5 text-sm font-medium text-violet hover:text-lavender transition-colors group"
+                    href={mod.detailPage}
+                    className="inline-flex items-center gap-1.5 text-sm font-medium text-violet hover:text-lavender transition-colors"
                   >
                     Mehr erfahren
                     <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
@@ -165,18 +130,18 @@ export default function KiLoesungenPage() {
       </section>
 
       {/* ─── CTA ─── */}
-      <section className="py-24 bg-snow">
+      <section className="py-16 bg-snow">
         <div className="mx-auto max-w-3xl px-6 text-center">
-          <h2 className="font-display text-4xl tracking-tight text-midnight mb-6">
+          <h2 className="font-display text-2xl tracking-tight text-midnight mb-6">
             Interesse geweckt?
           </h2>
           <p className="text-lg text-midnight/50 mb-10">
             Wir zeigen Ihnen gerne in einer persönlichen Demo, wie unsere
-            Lösungen Ihren Praxisalltag vereinfachen können.
+            Module Ihren Praxisalltag vereinfachen können.
           </p>
           <Link
             href="/kontakt"
-            className="group inline-flex items-center gap-2 bg-violet hover:bg-iris text-white px-8 py-4 rounded-full font-semibold text-lg transition-all duration-300 hover:shadow-[0_0_32px_rgba(103,61,230,0.4)] hover:-translate-y-0.5"
+            className="group inline-flex items-center gap-2 bg-violet hover:bg-iris text-white px-8 py-4 rounded-full font-semibold text-lg transition-all duration-300 hover:shadow-[0_0_32px_rgba(46,125,142,0.4)] hover:-translate-y-0.5"
           >
             Demo anfragen
             <ArrowRight className="w-5 h-5 transition-transform group-hover:translate-x-1" />

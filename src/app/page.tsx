@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import {
   Zap,
   Lightbulb,
@@ -7,184 +8,125 @@ import {
   Shield,
   Globe,
   RefreshCcw,
-  Monitor,
-  Settings,
-  FileText,
-  FileCheck,
-  Users,
   ArrowRight,
-  Sparkles,
 } from "lucide-react";
+import { getVisibleModules } from "@/data/modules";
 
 const features = [
   {
     icon: Zap,
     title: "Effizienz steigern",
     description:
-      "KI-optimierte Abläufe reduzieren Verwaltungsaufwand und schaffen mehr Zeit für das Wesentliche — die Patientenversorgung.",
+      "Digitale Abläufe reduzieren Verwaltungsaufwand und schaffen mehr Zeit für die Patientenversorgung.",
   },
   {
     icon: Lightbulb,
     title: "Innovative Lösungen",
     description:
-      "Modernste KI-Technologie, speziell für den medizinischen Alltag entwickelt. Automatisierung, die wirklich entlastet.",
+      "Modernste Technologie, speziell für den medizinischen Alltag entwickelt.",
   },
   {
     icon: Cloud,
     title: "Cloudbasierte SaaS",
     description:
-      "Browserbasierter Zugriff ohne lokale Installation. Zentrale Benutzerverwaltung und automatische Updates inklusive.",
+      "Browserbasierter Zugriff ohne Installation. Zentrale Verwaltung und automatische Updates.",
   },
 ];
 
 const pillars = [
   {
     icon: ClipboardCheck,
-    number: "01",
     title: "Effizientere Abläufe",
-    description:
-      "Digitale Patientenanmeldung und automatisierte Dokumentation beschleunigen den Praxisalltag erheblich.",
+    description: "Digitale Patientenanmeldung und automatisierte Dokumentation.",
   },
   {
     icon: Shield,
-    number: "02",
     title: "Sicherheit & Kontrolle",
-    description:
-      "Rollenbasierte Benutzerverwaltung mit mehrstufigem Zugriffsmodell für maximale Datensicherheit.",
+    description: "Rollenbasierte Verwaltung mit mehrstufigem Zugriffsmodell.",
   },
   {
     icon: Globe,
-    number: "03",
     title: "SaaS & Cloud",
-    description:
-      "Browserbasierter Zugriff von überall. Keine lokale Installation, keine Wartung, stets aktuell.",
+    description: "Browserbasierter Zugriff von überall, stets aktuell.",
   },
   {
     icon: RefreshCcw,
-    number: "04",
-    title: "Kontinuierliche Weiterentwicklung",
-    description:
-      "Automatische Updates und neue Funktionen basierend auf direktem Praxis-Feedback.",
+    title: "Stetige Weiterentwicklung",
+    description: "Automatische Updates basierend auf Praxis-Feedback.",
   },
 ];
 
-const useCases = [
-  {
-    icon: Monitor,
-    title: "Self-Check-In Terminal",
-    description: "Digitale Selbstanmeldung für Patienten am Empfang.",
-  },
-  {
-    icon: Settings,
-    title: "Terminal-Konfiguration",
-    description: "Individuelle Anpassung der Check-In-Prozesse.",
-  },
-  {
-    icon: FileText,
-    title: "Sprechstunden\u00ADdokumentation",
-    description: "Automatische Dokumentation des Arzt-Patienten-Gesprächs.",
-  },
-  {
-    icon: FileCheck,
-    title: "Gutachten\u00ADerstellung",
-    description: "KI-gestützte Erstellung medizinischer Gutachten.",
-  },
-  {
-    icon: Users,
-    title: "Wartezimmer\u00ADaufruf",
-    description: "Intelligentes Aufruf- und Wartezimmermanagement.",
-  },
-];
+const visibleModules = getVisibleModules();
 
 export default function HomePage() {
   return (
     <>
       {/* ─── Hero ─── */}
-      <section className="relative min-h-screen flex items-center overflow-hidden bg-gradient-to-br from-midnight via-void to-abyss">
-        {/* Background pattern */}
-        <div className="absolute inset-0 dot-grid opacity-60" />
+      <section className="relative min-h-[30vh] flex items-center overflow-hidden">
+        <div
+          className="absolute inset-0 bg-cover bg-center"
+          style={{ backgroundImage: "url('/images/hero_bg.png')" }}
+        />
+        <div className="absolute inset-0 bg-midnight/70" />
+        <div className="absolute inset-0 bg-gradient-to-b from-white/10 via-transparent to-white/20" />
 
-        {/* Decorative shapes */}
-        <div className="absolute top-32 right-[15%] w-72 h-72 rounded-full bg-violet/8 blur-3xl animate-pulse-glow" />
-        <div className="absolute bottom-24 left-[10%] w-56 h-56 rounded-full bg-iris/6 blur-3xl animate-pulse-glow delay-500" />
-        <div className="absolute top-1/2 right-[8%] w-px h-48 bg-gradient-to-b from-transparent via-violet/20 to-transparent" />
-        <div className="absolute top-[20%] left-[5%] w-16 h-16 border border-violet/10 rounded-lg rotate-12 animate-float" />
-        <div className="absolute bottom-[30%] right-[20%] w-8 h-8 border border-lavender/15 rounded-full animate-float delay-300" />
-
-        <div className="relative z-10 mx-auto max-w-7xl px-6 lg:px-8 pt-32 pb-20">
-          <div className="max-w-4xl">
-            {/* Badge */}
-            <div className="animate-fade-up inline-flex items-center gap-2 mb-8 px-4 py-2 rounded-full glass text-sm text-white/60">
-              <Sparkles className="w-4 h-4 text-violet" />
-              <span>KI-gestützte Praxissoftware</span>
-            </div>
-
-            {/* Headline */}
-            <h1 className="animate-fade-up delay-100 font-display text-5xl sm:text-6xl lg:text-7xl leading-[1.1] tracking-tight text-white mb-8">
-              Prozessdigitalisierung
-              <br />
-              <span className="gradient-text">und Automatisierung</span>
-              <br />
+        <div className="relative z-10 mx-auto max-w-7xl px-6 lg:px-8 pt-24 pb-10 w-full">
+          <div className="max-w-5xl mx-auto text-center">
+            <h1 className="font-display text-3xl sm:text-4xl lg:text-5xl leading-[1.15] tracking-tight text-white mb-5">
+              Prozessdigitalisierung{" "}
+              <span className="gradient-text">und Automatisierung</span>{" "}
               für moderne Arztpraxen
             </h1>
 
-            {/* Subtitle */}
-            <p className="animate-fade-up delay-200 text-lg sm:text-xl text-white/50 max-w-2xl leading-relaxed mb-12">
-              Entlasten Sie Ihr medizinisches Personal durch intelligente,
-              KI-gestützte digitale Lösungen. Mehr Zeit für Patienten,
-              weniger Verwaltungsaufwand.
+            <p className="text-base sm:text-lg text-white/60 max-w-2xl mx-auto leading-relaxed mb-8">
+              Entlasten Sie Ihr medizinisches Personal durch intelligente
+              digitale Lösungen. Mehr Zeit für Patienten, weniger Verwaltungsaufwand.
             </p>
 
-            {/* CTAs */}
-            <div className="animate-fade-up delay-300 flex flex-wrap gap-4">
+            <div className="flex flex-wrap justify-center gap-3">
               <Link
                 href="/kontakt"
-                className="group inline-flex items-center gap-2 bg-violet hover:bg-iris text-white px-7 py-4 rounded-full font-semibold transition-all duration-300 hover:shadow-[0_0_32px_rgba(103,61,230,0.4)] hover:-translate-y-0.5"
+                className="group inline-flex items-center gap-2 bg-violet hover:bg-iris text-white px-6 py-3 rounded-full font-semibold transition-all duration-300 hover:shadow-[0_0_24px_rgba(46,125,142,0.4)]"
               >
                 Kontakt aufnehmen
                 <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
               </Link>
               <Link
                 href="/ki-loesungen"
-                className="inline-flex items-center gap-2 px-7 py-4 rounded-full font-semibold text-white/70 border border-white/10 hover:border-white/25 hover:text-white transition-all duration-300 hover:bg-white/5"
+                className="inline-flex items-center gap-2 px-6 py-3 rounded-full font-semibold text-white/80 border border-white/20 hover:border-white/40 hover:text-white transition-all duration-300 hover:bg-white/5"
               >
-                Produktdetails ansehen
+                Unsere Lösungen
               </Link>
             </div>
           </div>
         </div>
 
-        {/* Bottom gradient fade */}
-        <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-snow to-transparent" />
+        <div className="absolute bottom-0 left-0 right-0 h-20 bg-gradient-to-t from-white to-transparent" />
       </section>
 
-      {/* ─── Features ─── */}
-      <section className="py-24 lg:py-32 bg-snow">
+      {/* ─── Features (3 Spalten, kompakt) ─── */}
+      <section className="py-14 bg-white">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <p className="text-sm font-semibold uppercase tracking-widest text-violet mb-3">
-              Unsere Stärken
-            </p>
-            <h2 className="font-display text-4xl lg:text-5xl tracking-tight text-midnight">
-              Intelligente Lösungen für
-              <br />
+          <div className="text-center mb-10">
+            <h2 className="font-display text-2xl lg:text-3xl tracking-tight text-midnight">
+              Intelligente Lösungen für{" "}
               <span className="gradient-text-dark">den medizinischen Alltag</span>
             </h2>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8">
-            {features.map((feature, i) => (
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {features.map((feature) => (
               <div
                 key={feature.title}
-                className="group relative p-8 rounded-2xl bg-white border border-violet/5 shadow-sm hover:shadow-xl hover:shadow-violet/5 transition-all duration-500 hover:-translate-y-1"
+                className="group p-6 rounded-xl bg-snow border border-violet/5 hover:shadow-lg hover:shadow-violet/5 transition-all duration-300"
               >
-                <div className="w-12 h-12 rounded-xl bg-violet/8 flex items-center justify-center mb-6 group-hover:bg-violet/15 transition-colors">
-                  <feature.icon className="w-6 h-6 text-violet" />
+                <div className="w-10 h-10 rounded-lg bg-violet/8 flex items-center justify-center mb-4 group-hover:bg-violet/15 transition-colors">
+                  <feature.icon className="w-5 h-5 text-violet" />
                 </div>
-                <h3 className="text-xl font-semibold text-midnight mb-3">
+                <h3 className="text-lg font-semibold text-midnight mb-2">
                   {feature.title}
                 </h3>
-                <p className="text-base text-midnight/55 leading-relaxed">
+                <p className="text-sm text-midnight/55 leading-relaxed">
                   {feature.description}
                 </p>
               </div>
@@ -193,36 +135,43 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ─── 4 Pillars ─── */}
-      <section className="relative py-24 lg:py-32 bg-gradient-to-br from-midnight via-void to-abyss overflow-hidden">
-        <div className="absolute inset-0 dot-grid opacity-40" />
+      {/* ─── Praxis-Bild ─── */}
+      <section className="bg-white">
+        <div className="mx-auto max-w-7xl px-6 lg:px-8">
+          <div className="relative rounded-2xl overflow-hidden">
+            <Image
+              src="https://placehold.co/1400x400/0F2A33/4DA3B5?text=Bild%3A+Moderne+Arztpraxis+mit+EmMa+Terminal+am+Empfang"
+              alt="Moderne Arztpraxis mit EmMa Terminal am Empfang"
+              width={1400}
+              height={400}
+              className="w-full h-auto object-cover"
+            />
+          </div>
+        </div>
+      </section>
 
-        <div className="relative z-10 mx-auto max-w-7xl px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <p className="text-sm font-semibold uppercase tracking-widest text-violet mb-3">
-              Unsere Säulen
-            </p>
-            <h2 className="font-display text-4xl lg:text-5xl tracking-tight text-white">
+      {/* ─── 4 Säulen (hell, kompakt) ─── */}
+      <section className="py-14 bg-snow">
+        <div className="mx-auto max-w-7xl px-6 lg:px-8">
+          <div className="text-center mb-10">
+            <h2 className="font-display text-2xl lg:text-3xl tracking-tight text-midnight">
               Worauf wir aufbauen
             </h2>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
             {pillars.map((pillar) => (
               <div
-                key={pillar.number}
-                className="group glass rounded-2xl p-8 hover:bg-white/8 transition-all duration-500"
+                key={pillar.title}
+                className="p-5 rounded-xl bg-white border border-violet/5 hover:shadow-md hover:shadow-violet/5 transition-all duration-300"
               >
-                <span className="block font-display text-5xl text-white/8 mb-4 group-hover:text-violet/20 transition-colors">
-                  {pillar.number}
-                </span>
-                <div className="w-10 h-10 rounded-lg bg-violet/15 flex items-center justify-center mb-5">
-                  <pillar.icon className="w-5 h-5 text-violet" />
+                <div className="w-9 h-9 rounded-lg bg-violet/8 flex items-center justify-center mb-3">
+                  <pillar.icon className="w-4.5 h-4.5 text-violet" />
                 </div>
-                <h3 className="text-lg font-semibold text-white mb-3">
+                <h3 className="text-base font-semibold text-midnight mb-1.5">
                   {pillar.title}
                 </h3>
-                <p className="text-sm text-white/40 leading-relaxed">
+                <p className="text-sm text-midnight/50 leading-relaxed">
                   {pillar.description}
                 </p>
               </div>
@@ -231,60 +180,68 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ─── Use Cases ─── */}
-      <section className="py-24 lg:py-32 bg-snow">
+      {/* ─── Module (dynamisch, hell) ─── */}
+      <section className="py-14 bg-white">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <p className="text-sm font-semibold uppercase tracking-widest text-violet mb-3">
-              Anwendungsbereiche
+          <div className="text-center mb-10">
+            <p className="text-sm font-semibold uppercase tracking-widest text-violet mb-2">
+              EmMa Module
             </p>
-            <h2 className="font-display text-4xl lg:text-5xl tracking-tight text-midnight">
-              Von der Anmeldung bis
-              <br />
-              <span className="gradient-text-dark">zur Dokumentation</span>
+            <h2 className="font-display text-2xl lg:text-3xl tracking-tight text-midnight">
+              Von der Anmeldung bis{" "}
+              <span className="gradient-text-dark">zur Abrechnung</span>
             </h2>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {useCases.map((uc) => (
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
+            {visibleModules.map((mod) => (
               <div
-                key={uc.title}
-                className="group flex items-start gap-5 p-6 rounded-2xl bg-white border border-violet/5 hover:shadow-lg hover:shadow-violet/5 transition-all duration-500 hover:-translate-y-0.5"
+                key={mod.id}
+                className="group flex items-start gap-4 p-4 rounded-xl bg-snow border border-violet/5 hover:shadow-md hover:shadow-violet/5 transition-all duration-300"
               >
-                <div className="w-11 h-11 rounded-xl bg-violet/8 flex items-center justify-center shrink-0 group-hover:bg-violet/15 transition-colors">
-                  <uc.icon className="w-5 h-5 text-violet" />
+                <div className="w-9 h-9 rounded-lg bg-violet/8 flex items-center justify-center shrink-0 group-hover:bg-violet/15 transition-colors">
+                  <mod.icon className="w-4 h-4 text-violet" />
                 </div>
-                <div>
-                  <h3 className="text-base font-semibold text-midnight mb-1">
-                    {uc.title}
+                <div className="min-w-0">
+                  <h3 className="text-sm font-semibold text-midnight mb-0.5">
+                    {mod.name}
                   </h3>
-                  <p className="text-sm text-midnight/50">{uc.description}</p>
+                  <p className="text-xs text-midnight/50 leading-relaxed">
+                    {mod.summary}
+                  </p>
                 </div>
               </div>
             ))}
           </div>
+
+          <div className="text-center mt-8">
+            <Link
+              href="/ki-loesungen"
+              className="inline-flex items-center gap-2 text-sm font-semibold text-violet hover:text-iris transition-colors"
+            >
+              Alle Module im Detail
+              <ArrowRight className="w-4 h-4" />
+            </Link>
+          </div>
         </div>
       </section>
 
-      {/* ─── CTA Banner ─── */}
-      <section className="relative py-24 bg-gradient-to-br from-void to-midnight overflow-hidden">
-        <div className="absolute inset-0 dot-grid opacity-30" />
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] rounded-full bg-violet/5 blur-3xl" />
-
-        <div className="relative z-10 mx-auto max-w-3xl px-6 text-center">
-          <h2 className="font-display text-4xl lg:text-5xl tracking-tight text-white mb-6">
+      {/* ─── CTA Banner (dezent, hell) ─── */}
+      <section className="py-14 bg-gradient-to-r from-violet/5 via-mauve/5 to-violet/5">
+        <div className="mx-auto max-w-3xl px-6 text-center">
+          <h2 className="font-display text-2xl lg:text-3xl tracking-tight text-midnight mb-4">
             Bereit für die digitale Zukunft?
           </h2>
-          <p className="text-lg text-white/45 mb-10 max-w-xl mx-auto">
-            Erfahren Sie, wie EmMa.AI Ihre Praxis effizienter gestalten
-            kann. Wir beraten Sie gerne persönlich.
+          <p className="text-base text-midnight/50 mb-8 max-w-xl mx-auto">
+            Erfahren Sie, wie EmMa Ihre Praxis effizienter gestalten kann.
+            Wir beraten Sie gerne persönlich.
           </p>
           <Link
             href="/kontakt"
-            className="group inline-flex items-center gap-2 bg-violet hover:bg-iris text-white px-8 py-4 rounded-full font-semibold text-lg transition-all duration-300 hover:shadow-[0_0_40px_rgba(103,61,230,0.45)] hover:-translate-y-0.5"
+            className="group inline-flex items-center gap-2 bg-violet hover:bg-iris text-white px-7 py-3.5 rounded-full font-semibold transition-all duration-300 hover:shadow-[0_0_24px_rgba(46,125,142,0.3)]"
           >
             Jetzt Kontakt aufnehmen
-            <ArrowRight className="w-5 h-5 transition-transform group-hover:translate-x-1" />
+            <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
           </Link>
         </div>
       </section>

@@ -9,9 +9,9 @@ export default function DatenschutzPage() {
   return (
     <>
       {/* ─── Hero ─── */}
-      <section className="relative pt-36 pb-12 bg-gradient-to-br from-midnight via-void to-abyss">
-        <div className="relative z-10 mx-auto max-w-7xl px-6 lg:px-8">
-          <h1 className="font-display text-5xl tracking-tight text-white">
+      <section className="relative pt-28 pb-10 bg-gradient-to-br from-midnight via-void to-abyss">
+        <div className="relative z-10 mx-auto max-w-7xl px-6 lg:px-8 text-center">
+          <h1 className="font-display text-3xl tracking-tight text-white">
             Datenschutzrichtlinie
           </h1>
         </div>

@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { Mail, MapPin } from "lucide-react";
 
 export default function Footer() {
@@ -9,10 +10,14 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12 py-16 border-b border-white/5">
           {/* Brand */}
           <div>
-            <Link href="/" className="inline-block text-2xl tracking-tight mb-4">
-              <span className="font-display text-white">EmMa</span>
-              <span className="text-violet font-display">.</span>
-              <span className="font-display text-white">AI</span>
+            <Link href="/" className="inline-block mb-4">
+              <Image
+                src="/images/logo_medidyne.png"
+                alt="Medidyne Systems"
+                width={180}
+                height={45}
+                className="h-9 w-auto"
+              />
             </Link>
             <p className="text-sm leading-relaxed text-white/40 max-w-xs">
               Prozessdigitalisierung und KI-gestützte Automatisierung

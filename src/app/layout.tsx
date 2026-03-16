@@ -1,13 +1,12 @@
 import type { Metadata } from "next";
-import { Instrument_Serif, Plus_Jakarta_Sans } from "next/font/google";
+import { Sora, Plus_Jakarta_Sans } from "next/font/google";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import "./globals.css";
 
-const instrumentSerif = Instrument_Serif({
+const sora = Sora({
   subsets: ["latin"],
-  weight: "400",
-  variable: "--font-instrument-serif",
+  variable: "--font-sora",
   display: "swap",
 });
 
@@ -42,7 +41,7 @@ export default function RootLayout({
   return (
     <html
       lang="de"
-      className={`${instrumentSerif.variable} ${plusJakartaSans.variable}`}
+      className={`${sora.variable} ${plusJakartaSans.variable}`}
     >
       <body className="min-h-screen flex flex-col">
         <Header />

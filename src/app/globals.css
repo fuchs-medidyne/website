@@ -1,18 +1,23 @@
 @import "tailwindcss";
 
 @theme {
-  --font-display: var(--font-instrument-serif), Georgia, serif;
+  --font-display: var(--font-sora), system-ui, sans-serif;
   --font-body: var(--font-plus-jakarta-sans), system-ui, sans-serif;
 
-  --color-midnight: #0F0A1F;
-  --color-void: #1A1035;
-  --color-abyss: #2f1c6a;
-  --color-iris: #5025d1;
-  --color-violet: #673de6;
-  --color-lavender: #8B6CEF;
-  --color-mist: #d5dfff;
-  --color-frost: #ebe4ff;
-  --color-snow: #F8F6FF;
+  /* Teal/Petrol from logo "MEDIDYNE" */
+  --color-midnight: #091A1F;
+  --color-void: #0F2A33;
+  --color-abyss: #1A4250;
+  --color-iris: #24616F;
+  --color-violet: #2E7D8E;
+  --color-lavender: #4DA3B5;
+  /* Mauve/Purple from logo "SYSTEMS" */
+  --color-mauve: #8E6B87;
+  --color-mauve-light: #A8899F;
+  /* Neutral lights with teal tint */
+  --color-mist: #B8DCE5;
+  --color-frost: #DFF0F4;
+  --color-snow: #F4FAFB;
 }
 
 html {
@@ -21,7 +26,7 @@ html {
 
 body {
   font-family: var(--font-body);
-  background-color: var(--color-snow);
+  background-color: #ffffff;
   color: #1a1a2e;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -29,20 +34,20 @@ body {
 
 /* Dot grid background pattern */
 .dot-grid {
-  background-image: radial-gradient(circle, rgba(103, 61, 230, 0.12) 1px, transparent 1px);
+  background-image: radial-gradient(circle, rgba(46, 125, 142, 0.12) 1px, transparent 1px);
   background-size: 28px 28px;
 }
 
 /* Gradient text utility */
 .gradient-text {
-  background: linear-gradient(135deg, #d5dfff 0%, #673de6 50%, #ebe4ff 100%);
+  background: linear-gradient(135deg, #B8DCE5 0%, #4DA3B5 40%, #8E6B87 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
 
 .gradient-text-dark {
-  background: linear-gradient(135deg, #2f1c6a 0%, #673de6 50%, #5025d1 100%);
+  background: linear-gradient(135deg, #1A4250 0%, #2E7D8E 40%, #8E6B87 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -60,7 +65,7 @@ body {
   background: rgba(255, 255, 255, 0.7);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
-  border: 1px solid rgba(103, 61, 230, 0.08);
+  border: 1px solid rgba(46, 125, 142, 0.08);
 }
 
 /* Staggered fade-up animation */
@@ -117,7 +122,7 @@ body {
 /* Section divider */
 .section-divider {
   height: 1px;
-  background: linear-gradient(90deg, transparent, rgba(103, 61, 230, 0.2), transparent);
+  background: linear-gradient(90deg, transparent, rgba(46, 125, 142, 0.2), transparent);
 }
 
 /* Custom scrollbar */
