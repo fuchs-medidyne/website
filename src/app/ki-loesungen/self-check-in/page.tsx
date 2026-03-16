@@ -1,0 +1,344 @@
+import type { Metadata } from "next";
+import Link from "next/link";
+import {
+  ArrowRight,
+  UserCheck,
+  Clock,
+  Hand,
+  Settings,
+  Palette,
+  Monitor,
+  Users,
+  Shield,
+  Sliders,
+  Touchpad,
+  Volume2,
+  Wifi,
+  Navigation,
+  CreditCard,
+  HardDrive,
+  Anchor,
+} from "lucide-react";
+
+export const metadata: Metadata = {
+  title: "Self-Check-In Terminal",
+  description:
+    "Self-Check-In Terminal für Patienten — schneller, kontaktarmer und intuitiver Praxisempfang mit Touchscreen-basierter Selbstanmeldung.",
+};
+
+const benefits = [
+  {
+    icon: UserCheck,
+    title: "Entlastung des Praxispersonals",
+    description: "Automatisierte Anmeldung reduziert den Arbeitsaufwand an der Rezeption deutlich.",
+  },
+  {
+    icon: Clock,
+    title: "Verkürzte Wartezeiten",
+    description: "Optimierter Patientenfluss durch parallele Selbstanmeldung mehrerer Patienten.",
+  },
+  {
+    icon: Hand,
+    title: "Intuitive Bedienung",
+    description: "Einfache Touch-Oberfläche, die für alle Altersgruppen verständlich und zugänglich ist.",
+  },
+  {
+    icon: Settings,
+    title: "Zentrale Administration",
+    description: "Einfache Konfiguration und Verwaltung aller Terminals über ein zentrales Backend.",
+  },
+  {
+    icon: Palette,
+    title: "Individuell anpassbar",
+    description: "Praxisindividuelle Workflows, Inhalte und Designs für Ihr Corporate Design.",
+  },
+  {
+    icon: Monitor,
+    title: "Modernes Terminaldesign",
+    description: "Hochwertiges Standterminal mit großformatigem Hochformat-Touchscreen.",
+  },
+];
+
+const techFeatures = [
+  {
+    category: "Patienteninteraktion",
+    icon: Touchpad,
+    items: [
+      "Digitale Selbstanmeldung am Terminal",
+      "Geführte Navigation durch den Check-In-Prozess",
+      "Anpassbare Inhalte und Formulare",
+      "Avatar- und Sprachnavigation für Barrierearmut",
+    ],
+  },
+  {
+    category: "Benutzer- & Rollenverwaltung",
+    icon: Users,
+    items: [
+      "Mehrstufiges Rollenmodell (Administrator, Arzt, MFA)",
+      "Zentrale Benutzerverwaltung",
+      "Individuelle Berechtigungen pro Rolle",
+      "Sichere Authentifizierung",
+    ],
+  },
+  {
+    category: "Administration & Konfiguration",
+    icon: Sliders,
+    items: [
+      "Zentrales Backend zur Einstellung",
+      "Praxisindividuelle Workflows",
+      "Verwaltung mehrerer Terminals",
+      "Echtzeit-Monitoring und Statistiken",
+    ],
+  },
+  {
+    category: "Benutzeroberfläche",
+    icon: Shield,
+    items: [
+      "Touch-optimiertes User Interface",
+      "Avatar- und Sprachnavigation",
+      "Fokus auf Barrierearmut",
+      "Responsive Design für verschiedene Bildschirmgrößen",
+    ],
+  },
+];
+
+const hardwareSpecs = [
+  { icon: Monitor, label: "Großformatiger Hochformat-Touchscreen" },
+  { icon: Wifi, label: "Integrierter Router mit SIM-Karte" },
+  { icon: Navigation, label: "GPS-basierter Diebstahlschutz" },
+  { icon: CreditCard, label: "Halterung für Kartenlesegerät (Cherry ST 1506)" },
+  { icon: Volume2, label: "Integrierte Soundbar" },
+  { icon: Anchor, label: "Stabile Bodenmontage" },
+];
+
+export default function SelfCheckInPage() {
+  return (
+    <>
+      {/* ─── Hero ─── */}
+      <section className="relative pt-36 pb-20 bg-gradient-to-br from-midnight via-void to-abyss overflow-hidden">
+        <div className="absolute inset-0 dot-grid opacity-40" />
+        <div className="absolute top-40 right-[10%] w-80 h-80 rounded-full bg-violet/8 blur-3xl" />
+
+        <div className="relative z-10 mx-auto max-w-7xl px-6 lg:px-8">
+          <div className="max-w-3xl">
+            <p className="text-sm font-semibold uppercase tracking-widest text-violet mb-4">
+              Produktdetails
+            </p>
+            <h1 className="font-display text-5xl lg:text-6xl tracking-tight text-white mb-6">
+              Self-Check-In Terminal
+              <br />
+              <span className="gradient-text">für Patienten</span>
+            </h1>
+            <p className="text-lg text-white/50 leading-relaxed max-w-2xl">
+              Ermöglichen Sie einen schnellen, kontaktarmen und intuitiven
+              Praxisempfang. Die Touchscreen-basierte Selbstanmeldung ist
+              speziell für den medizinischen Einsatz konzipiert: klar
+              strukturiert, barrierearm und individuell anpassbar.
+            </p>
+          </div>
+        </div>
+
+        <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-snow to-transparent" />
+      </section>
+
+      {/* ─── Benefits ─── */}
+      <section className="py-24 lg:py-32 bg-snow">
+        <div className="mx-auto max-w-7xl px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <p className="text-sm font-semibold uppercase tracking-widest text-violet mb-3">
+              Vorteile
+            </p>
+            <h2 className="font-display text-4xl lg:text-5xl tracking-tight text-midnight">
+              Warum Self-Check-In?
+            </h2>
+          </div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            {benefits.map((b) => (
+              <div
+                key={b.title}
+                className="group p-8 rounded-2xl bg-white border border-violet/5 shadow-sm hover:shadow-xl hover:shadow-violet/5 transition-all duration-500 hover:-translate-y-1"
+              >
+                <div className="w-12 h-12 rounded-xl bg-violet/8 flex items-center justify-center mb-6 group-hover:bg-violet/15 transition-colors">
+                  <b.icon className="w-6 h-6 text-violet" />
+                </div>
+                <h3 className="text-lg font-semibold text-midnight mb-2">
+                  {b.title}
+                </h3>
+                <p className="text-sm text-midnight/50 leading-relaxed">
+                  {b.description}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ─── Technical Features ─── */}
+      <section className="relative py-24 lg:py-32 bg-gradient-to-br from-midnight to-void overflow-hidden">
+        <div className="absolute inset-0 dot-grid opacity-30" />
+
+        <div className="relative z-10 mx-auto max-w-7xl px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <p className="text-sm font-semibold uppercase tracking-widest text-violet mb-3">
+              Technische Details
+            </p>
+            <h2 className="font-display text-4xl lg:text-5xl tracking-tight text-white">
+              Systemfunktionen
+            </h2>
+            <p className="mt-4 text-lg text-white/40 max-w-2xl mx-auto">
+              Das System basiert auf einer webbasierten Applikation mit
+              zentraler Benutzer- und Rollenverwaltung.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {techFeatures.map((tf) => (
+              <div key={tf.category} className="glass rounded-2xl p-8">
+                <div className="flex items-center gap-3 mb-6">
+                  <div className="w-10 h-10 rounded-lg bg-violet/15 flex items-center justify-center">
+                    <tf.icon className="w-5 h-5 text-violet" />
+                  </div>
+                  <h3 className="text-lg font-semibold text-white">
+                    {tf.category}
+                  </h3>
+                </div>
+                <ul className="space-y-3">
+                  {tf.items.map((item) => (
+                    <li
+                      key={item}
+                      className="flex items-start gap-3 text-sm text-white/45"
+                    >
+                      <span className="mt-1.5 w-1.5 h-1.5 rounded-full bg-violet/60 shrink-0" />
+                      {item}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ─── Architecture ─── */}
+      <section className="py-24 lg:py-32 bg-snow">
+        <div className="mx-auto max-w-7xl px-6 lg:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+            <div>
+              <p className="text-sm font-semibold uppercase tracking-widest text-violet mb-3">
+                Architektur
+              </p>
+              <h2 className="font-display text-4xl tracking-tight text-midnight mb-6">
+                Systemarchitektur
+              </h2>
+              <p className="text-lg text-midnight/50 leading-relaxed mb-6">
+                Unsere Lösung basiert auf einer modernen, webbasierten
+                Architektur mit zentraler Backend-Konfiguration. Das System
+                ist erweiterbar und updatefähig — neue Funktionen werden
+                automatisch ausgerollt.
+              </p>
+              <div className="space-y-4">
+                {[
+                  "Webbasierte Anwendung — kein Client-Install nötig",
+                  "Zentrale Backend-Konfiguration für alle Terminals",
+                  "Erweiterbar durch modulare Architektur",
+                  "Automatische Updates ohne Praxis-Downtime",
+                ].map((item) => (
+                  <div key={item} className="flex items-start gap-3">
+                    <div className="mt-1.5 w-2 h-2 rounded-full bg-violet shrink-0" />
+                    <span className="text-midnight/60">{item}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* Visual Architecture Diagram */}
+            <div className="relative">
+              <div className="rounded-2xl bg-gradient-to-br from-midnight to-void p-8 border border-white/5">
+                <div className="space-y-4">
+                  <div className="glass rounded-xl p-4 text-center">
+                    <p className="text-xs text-white/30 uppercase tracking-wider mb-1">Frontend</p>
+                    <p className="text-sm font-medium text-white/70">Touch-optimiertes Web-Interface</p>
+                  </div>
+                  <div className="flex justify-center">
+                    <div className="w-px h-6 bg-violet/30" />
+                  </div>
+                  <div className="glass rounded-xl p-4 text-center">
+                    <p className="text-xs text-white/30 uppercase tracking-wider mb-1">Backend</p>
+                    <p className="text-sm font-medium text-white/70">Zentrale API & Konfiguration</p>
+                  </div>
+                  <div className="flex justify-center">
+                    <div className="w-px h-6 bg-violet/30" />
+                  </div>
+                  <div className="grid grid-cols-3 gap-3">
+                    {["Benutzerverwaltung", "Terminaldaten", "Analytics"].map((label) => (
+                      <div key={label} className="glass rounded-lg p-3 text-center">
+                        <p className="text-xs text-white/50">{label}</p>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ─── Hardware ─── */}
+      <section className="relative py-24 lg:py-32 bg-gradient-to-br from-void to-midnight overflow-hidden">
+        <div className="absolute inset-0 dot-grid opacity-30" />
+
+        <div className="relative z-10 mx-auto max-w-7xl px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <p className="text-sm font-semibold uppercase tracking-widest text-violet mb-3">
+              Hardware
+            </p>
+            <h2 className="font-display text-4xl lg:text-5xl tracking-tight text-white">
+              Terminal-Spezifikationen
+            </h2>
+            <p className="mt-4 text-lg text-white/40 max-w-2xl mx-auto">
+              Robustes Standterminal mit professioneller Ausstattung für den
+              Dauerbetrieb im Praxisempfang.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            {hardwareSpecs.map((spec) => (
+              <div
+                key={spec.label}
+                className="glass rounded-2xl p-6 flex items-center gap-4"
+              >
+                <div className="w-11 h-11 rounded-xl bg-violet/15 flex items-center justify-center shrink-0">
+                  <spec.icon className="w-5 h-5 text-violet" />
+                </div>
+                <span className="text-sm font-medium text-white/65">
+                  {spec.label}
+                </span>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ─── CTA ─── */}
+      <section className="py-24 bg-snow">
+        <div className="mx-auto max-w-3xl px-6 text-center">
+          <h2 className="font-display text-4xl tracking-tight text-midnight mb-6">
+            Self-Check-In live erleben
+          </h2>
+          <p className="text-lg text-midnight/50 mb-10">
+            Überzeugen Sie sich selbst von der einfachen Bedienung und den
+            Vorteilen für Ihre Praxis. Wir bieten Ihnen eine kostenlose Demo.
+          </p>
+          <Link
+            href="/kontakt"
+            className="group inline-flex items-center gap-2 bg-violet hover:bg-iris text-white px-8 py-4 rounded-full font-semibold text-lg transition-all duration-300 hover:shadow-[0_0_32px_rgba(103,61,230,0.4)] hover:-translate-y-0.5"
+          >
+            Demo vereinbaren
+            <ArrowRight className="w-5 h-5 transition-transform group-hover:translate-x-1" />
+          </Link>
+        </div>
+      </section>
+    </>
+  );
+}
