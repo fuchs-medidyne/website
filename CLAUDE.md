@@ -4,6 +4,17 @@
 Website für die **Medidyne Systems GmbH** (Marke: EmMa.AI) — KI-Lösungen für Arztpraxen.
 Produktionswebsite unter: https://www.medidyne-systems.de/ (aktuell noch auf Hostinger, Migration zu Vercel geplant)
 
+## Das Team
+
+Die Website hat ein eigenes Projekt-Team. Schnittstelle zur Steuerungsebene ist der Web-Leiter.
+Vollstaendige Profile: `Team/`, Verzeichnis: `Team/VERZEICHNIS.md`.
+
+| Rolle | Funktion | Wann delegieren |
+|-------|----------|-----------------|
+| **Web-Leiter** | Koordination | Seitenuebergreifende Aufgaben, Priorisierung |
+| **Web-Architekt** | Technische Struktur | Next.js-Architektur, Komponenten, Performance |
+| **Web-Rollen** | Rollenspezialist | Neuen Spezialisten brauchen, Team erweitern |
+
 ## Tech-Stack
 - **Framework:** Next.js 16 (App Router, `src/app/` Verzeichnisstruktur)
 - **Sprache:** TypeScript
