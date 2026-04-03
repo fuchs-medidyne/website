@@ -5,21 +5,15 @@ import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { Menu, X, ChevronDown } from "lucide-react";
-import { getVisibleModules } from "@/data/modules";
-
-const visibleModules = getVisibleModules();
-
 const navItems = [
   { label: "Startseite", href: "/" },
   { label: "Über uns", href: "/ueber-uns" },
   {
-    label: "Lösungen",
+    label: "KI Lösungen",
     href: "/ki-loesungen",
     children: [
       { label: "Übersicht", href: "/ki-loesungen" },
-      ...visibleModules
-        .filter((m) => m.detailPage)
-        .map((m) => ({ label: m.name, href: m.detailPage! })),
+      { label: "Self-Check-In Terminal", href: "/ki-loesungen/self-check-in" },
     ],
   },
 ];

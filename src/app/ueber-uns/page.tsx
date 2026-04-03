@@ -71,10 +71,9 @@ export default function UeberUnsPage() {
               <span className="gradient-text">und Automatisierung</span>
             </h1>
             <p className="text-lg text-white/50 leading-relaxed max-w-2xl mx-auto">
-              Die Medidyne Systems GmbH setzt KI ein, um Verwaltungsaufgaben
-              in Arztpraxen zu automatisieren. Unser Expertenteam entlastet
-              medizinisches Personal und verbessert die Patientenversorgung
-              nachhaltig.
+              Mit einem interdisziplinären Team aus der Medizin, der IT und
+              der Betriebswirtschaft entwickeln wir innovative KI-Lösungen,
+              die das Gesundheitssystem unterstützen.
             </p>
           </div>
         </div>
@@ -187,13 +186,13 @@ export default function UeberUnsPage() {
             Nachhaltige SaaS-Lösungen
           </h2>
           <p className="text-lg text-midnight/55 leading-relaxed mb-6">
-            Wir fokussieren uns auf nachhaltige Software-as-a-Service-Lösungen
-            für Arztpraxen. Unsere Produktentwicklung basiert auf
-            kontinuierlichem Feedback direkt aus der Praxis.
+            Unser Anspruch ist es, eine nachhaltige und zukunftsfähige
+            SaaS-Lösung für Arztpraxen bereitzustellen. Kontinuierliche
+            Weiterentwicklung ist strategischer Bestandteil unserer Arbeit.
           </p>
           <p className="text-lg text-midnight/55 leading-relaxed">
-            So stellen wir sicher, dass unsere Lösungen nicht nur
-            technologisch innovativ sind, sondern auch den realen
+            Regelmäßig arbeiten wir Praxis-Feedback in neue Funktionen und
+            Verbesserungen ein — so entstehen Lösungen, die den realen
             Bedürfnissen im medizinischen Alltag gerecht werden.
           </p>
         </div>

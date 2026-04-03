@@ -2,61 +2,66 @@ import Link from "next/link";
 import Image from "next/image";
 import {
   Zap,
-  Lightbulb,
-  Cloud,
-  ClipboardCheck,
   Shield,
-  Globe,
+  Cloud,
   RefreshCcw,
   ArrowRight,
+  CheckCircle,
+  Monitor,
+  Settings,
+  FileText,
+  FileCheck,
+  Users,
+  Heart,
+  ClipboardCheck,
+  Lightbulb,
 } from "lucide-react";
-import { getVisibleModules } from "@/data/modules";
 
-const features = [
-  {
-    icon: Zap,
-    title: "Effizienz steigern",
-    description:
-      "Digitale Abläufe reduzieren Verwaltungsaufwand und schaffen mehr Zeit für die Patientenversorgung.",
-  },
-  {
-    icon: Lightbulb,
-    title: "Innovative Lösungen",
-    description:
-      "Modernste Technologie, speziell für den medizinischen Alltag entwickelt.",
-  },
-  {
-    icon: Cloud,
-    title: "Cloudbasierte SaaS",
-    description:
-      "Browserbasierter Zugriff ohne Installation. Zentrale Verwaltung und automatische Updates.",
-  },
+const efficiencyPoints = [
+  "Optimierung der Praxisabläufe durch KI-Technologie",
+  "Verbesserung der Patientenversorgung durch automatisierte Prozesse",
+  "Entlastung für Ärzte und medizinisches Fachpersonal",
 ];
 
 const pillars = [
   {
-    icon: ClipboardCheck,
+    icon: Zap,
     title: "Effizientere Abläufe",
-    description: "Digitale Patientenanmeldung und automatisierte Dokumentation.",
+    description: "Zentrale Verwaltung von Benutzern und Rollen.",
   },
   {
     icon: Shield,
-    title: "Sicherheit & Kontrolle",
-    description: "Rollenbasierte Verwaltung mit mehrstufigem Zugriffsmodell.",
+    title: "Sicherheit und Kontrolle",
+    description: "Klare Zugriffsbeschränkungen je nach Funktion.",
   },
   {
-    icon: Globe,
-    title: "SaaS & Cloud",
-    description: "Browserbasierter Zugriff von überall, stets aktuell.",
+    icon: Cloud,
+    title: "Software as a Service & Cloud",
+    description:
+      "Betrieb in einer professionellen Cloud-Infrastruktur. Keine lokale Installation oder Wartung erforderlich. Zugriff über Browser — unabhängig von Endgerät und Standort.",
   },
   {
     icon: RefreshCcw,
-    title: "Stetige Weiterentwicklung",
-    description: "Automatische Updates basierend auf Praxis-Feedback.",
+    title: "Kontinuierliche Weiterentwicklung",
+    description:
+      "Automatische Updates ohne Unterbrechung des Praxisbetriebs. Die Anwendung wird kontinuierlich weiterentwickelt und funktional erweitert. Neue Features, Optimierungen und Anpassungen an regulatorische oder praxisrelevante Anforderungen werden regelmäßig bereitgestellt — automatisch und ohne Mehraufwand für die Praxis.",
   },
 ];
 
-const visibleModules = getVisibleModules();
+const useCases = [
+  { icon: Monitor, text: "Digitaler Self-Check-In für Patienten" },
+  { icon: Settings, text: "Zentrale Konfiguration von Praxis-Terminals" },
+  { icon: FileText, text: "Unterstützung zur Sprechstundendokumentation" },
+  { icon: FileCheck, text: "Unterstützung bei der Gutachtenerstellung" },
+  { icon: Users, text: "Vereinfachter Wartezimmeraufruf" },
+];
+
+const trustPoints = [
+  { icon: Heart, text: "Entwickelt für den Einsatz im medizinischen Umfeld" },
+  { icon: ClipboardCheck, text: "Berücksichtigung praxisrelevanter Workflows" },
+  { icon: Lightbulb, text: "Einsatz von KI" },
+  { icon: Shield, text: "Fokus auf Sicherheit, Stabilität und Erweiterbarkeit" },
+];
 
 export default function HomePage() {
   return (
@@ -79,8 +84,8 @@ export default function HomePage() {
             </h1>
 
             <p className="text-base sm:text-lg text-white/60 max-w-2xl mx-auto leading-relaxed mb-8">
-              Entlasten Sie Ihr medizinisches Personal durch intelligente
-              digitale Lösungen. Mehr Zeit für Patienten, weniger Verwaltungsaufwand.
+              Entlasten Sie medizinisches Personal durch digitale Lösungen und
+              schaffen Sie Zeit für wertschöpfende Aufgaben.
             </p>
 
             <div className="flex flex-wrap justify-center gap-3">
@@ -104,54 +109,94 @@ export default function HomePage() {
         <div className="absolute bottom-0 left-0 right-0 h-20 bg-gradient-to-t from-white to-transparent" />
       </section>
 
-      {/* ─── Features (3 Spalten, kompakt) ─── */}
+      {/* ─── Effizienz steigern ─── */}
       <section className="py-14 bg-white">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="text-center mb-10">
             <h2 className="font-display text-2xl lg:text-3xl tracking-tight text-midnight">
-              Intelligente Lösungen für{" "}
-              <span className="gradient-text-dark">den medizinischen Alltag</span>
+              Effizienz{" "}
+              <span className="gradient-text-dark">steigern</span>
             </h2>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {features.map((feature) => (
+          <div className="max-w-2xl mx-auto space-y-4">
+            {efficiencyPoints.map((point) => (
               <div
-                key={feature.title}
-                className="group p-6 rounded-xl bg-snow border border-violet/5 hover:shadow-lg hover:shadow-violet/5 transition-all duration-300"
+                key={point}
+                className="flex items-start gap-4 p-5 rounded-xl bg-snow border border-violet/5 hover:shadow-lg hover:shadow-violet/5 transition-all duration-300"
               >
-                <div className="w-10 h-10 rounded-lg bg-violet/8 flex items-center justify-center mb-4 group-hover:bg-violet/15 transition-colors">
-                  <feature.icon className="w-5 h-5 text-violet" />
-                </div>
-                <h3 className="text-lg font-semibold text-midnight mb-2">
-                  {feature.title}
-                </h3>
-                <p className="text-sm text-midnight/55 leading-relaxed">
-                  {feature.description}
-                </p>
+                <CheckCircle className="w-5 h-5 text-violet shrink-0 mt-0.5" />
+                <span className="text-midnight/70 leading-relaxed">
+                  {point}
+                </span>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* ─── Praxis-Bild ─── */}
-      <section className="bg-white">
+      {/* ─── KI-gestützte Automatisierung ─── */}
+      <section className="py-14 bg-snow">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
-          <div className="relative rounded-2xl overflow-hidden">
-            <Image
-              src="https://placehold.co/1400x400/0F2A33/4DA3B5?text=Bild%3A+Moderne+Arztpraxis+mit+EmMa+Terminal+am+Empfang"
-              alt="Moderne Arztpraxis mit EmMa Terminal am Empfang"
-              width={1400}
-              height={400}
-              className="w-full h-auto object-cover"
-            />
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div>
+              <h2 className="font-display text-2xl lg:text-3xl tracking-tight text-midnight mb-6">
+                KI-gestützte{" "}
+                <span className="gradient-text-dark">Automatisierung</span>
+              </h2>
+              <p className="text-midnight/55 leading-relaxed mb-4">
+                Optimieren Sie Anmeldung, Benutzerverwaltung und
+                Praxisabläufe mit einer cloudbasierten SaaS-Lösung — sicher,
+                wartungsarm und speziell für den professionellen Einsatz im
+                medizinischen Alltag entwickelt.
+              </p>
+              <p className="text-midnight/55 leading-relaxed mb-8">
+                Unsere Lösung unterstützt Arztpraxen bei der digitalen
+                Organisation von Patienten- und Benutzerprozessen. Von der
+                rollenbasierten Benutzerverwaltung bis zum Self-Check-In am
+                Terminal — alle Funktionen sind praxisnah, effizient und
+                datenschutzkonform konzipiert.
+              </p>
+
+              <div className="space-y-3 mb-8">
+                <div className="flex items-start gap-3">
+                  <CheckCircle className="w-5 h-5 text-violet shrink-0 mt-0.5" />
+                  <span className="text-midnight/70">
+                    Digitale Patientenanmeldung per Self-Check-In
+                  </span>
+                </div>
+                <div className="flex items-start gap-3">
+                  <CheckCircle className="w-5 h-5 text-violet shrink-0 mt-0.5" />
+                  <span className="text-midnight/70">
+                    Reduzierung administrativer Tätigkeiten
+                  </span>
+                </div>
+              </div>
+
+              <Link
+                href="/kontakt"
+                className="group inline-flex items-center gap-2 bg-violet hover:bg-iris text-white px-6 py-3 rounded-full font-semibold transition-all duration-300 hover:shadow-[0_0_24px_rgba(46,125,142,0.4)]"
+              >
+                Kontakt aufnehmen
+                <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
+              </Link>
+            </div>
+
+            <div className="relative rounded-2xl overflow-hidden">
+              <Image
+                src="https://placehold.co/700x500/0F2A33/4DA3B5?text=Bild%3A+Moderne+Arztpraxis+mit+EmMa+Terminal"
+                alt="Moderne Arztpraxis mit EmMa Terminal am Empfang"
+                width={700}
+                height={500}
+                className="w-full h-auto object-cover rounded-2xl"
+              />
+            </div>
           </div>
         </div>
       </section>
 
-      {/* ─── 4 Säulen (hell, kompakt) ─── */}
-      <section className="py-14 bg-snow">
+      {/* ─── Vier Säulen ─── */}
+      <section className="py-14 bg-white">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="text-center mb-10">
             <h2 className="font-display text-2xl lg:text-3xl tracking-tight text-midnight">
@@ -163,7 +208,7 @@ export default function HomePage() {
             {pillars.map((pillar) => (
               <div
                 key={pillar.title}
-                className="p-5 rounded-xl bg-white border border-violet/5 hover:shadow-md hover:shadow-violet/5 transition-all duration-300"
+                className="p-5 rounded-xl bg-snow border border-violet/5 hover:shadow-md hover:shadow-violet/5 transition-all duration-300"
               >
                 <div className="w-9 h-9 rounded-lg bg-violet/8 flex items-center justify-center mb-3">
                   <pillar.icon className="w-4.5 h-4.5 text-violet" />
@@ -180,36 +225,28 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ─── Module (dynamisch, hell) ─── */}
-      <section className="py-14 bg-white">
+      {/* ─── Typische Anwendungsfälle ─── */}
+      <section className="py-14 bg-snow">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="text-center mb-10">
-            <p className="text-sm font-semibold uppercase tracking-widest text-violet mb-2">
-              EmMa Module
-            </p>
             <h2 className="font-display text-2xl lg:text-3xl tracking-tight text-midnight">
-              Von der Anmeldung bis{" "}
-              <span className="gradient-text-dark">zur Abrechnung</span>
+              Typische{" "}
+              <span className="gradient-text-dark">Anwendungsfälle</span>
             </h2>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
-            {visibleModules.map((mod) => (
+          <div className="max-w-3xl mx-auto grid grid-cols-1 sm:grid-cols-2 gap-4">
+            {useCases.map((uc) => (
               <div
-                key={mod.id}
-                className="group flex items-start gap-4 p-4 rounded-xl bg-snow border border-violet/5 hover:shadow-md hover:shadow-violet/5 transition-all duration-300"
+                key={uc.text}
+                className="group flex items-center gap-4 p-4 rounded-xl bg-white border border-violet/5 hover:shadow-md hover:shadow-violet/5 transition-all duration-300"
               >
                 <div className="w-9 h-9 rounded-lg bg-violet/8 flex items-center justify-center shrink-0 group-hover:bg-violet/15 transition-colors">
-                  <mod.icon className="w-4 h-4 text-violet" />
+                  <uc.icon className="w-4 h-4 text-violet" />
                 </div>
-                <div className="min-w-0">
-                  <h3 className="text-sm font-semibold text-midnight mb-0.5">
-                    {mod.name}
-                  </h3>
-                  <p className="text-xs text-midnight/50 leading-relaxed">
-                    {mod.summary}
-                  </p>
-                </div>
+                <span className="text-sm font-medium text-midnight/70">
+                  {uc.text}
+                </span>
               </div>
             ))}
           </div>
@@ -217,16 +254,37 @@ export default function HomePage() {
           <div className="text-center mt-8">
             <Link
               href="/ki-loesungen"
-              className="inline-flex items-center gap-2 text-sm font-semibold text-violet hover:text-iris transition-colors"
+              className="group inline-flex items-center gap-2 bg-violet hover:bg-iris text-white px-6 py-3 rounded-full font-semibold transition-all duration-300 hover:shadow-[0_0_24px_rgba(46,125,142,0.4)]"
             >
-              Alle Module im Detail
-              <ArrowRight className="w-4 h-4" />
+              Produktdetails ansehen
+              <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
             </Link>
           </div>
         </div>
       </section>
 
-      {/* ─── CTA Banner (dezent, hell) ─── */}
+      {/* ─── Vertrauensaufbau ─── */}
+      <section className="py-14 bg-white">
+        <div className="mx-auto max-w-7xl px-6 lg:px-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+            {trustPoints.map((tp) => (
+              <div
+                key={tp.text}
+                className="flex items-start gap-3 p-5 rounded-xl bg-snow border border-violet/5"
+              >
+                <div className="w-9 h-9 rounded-lg bg-violet/8 flex items-center justify-center shrink-0">
+                  <tp.icon className="w-4.5 h-4.5 text-violet" />
+                </div>
+                <span className="text-sm font-medium text-midnight/70 leading-relaxed pt-1.5">
+                  {tp.text}
+                </span>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ─── CTA Banner ─── */}
       <section className="py-14 bg-gradient-to-r from-violet/5 via-mauve/5 to-violet/5">
         <div className="mx-auto max-w-3xl px-6 text-center">
           <h2 className="font-display text-2xl lg:text-3xl tracking-tight text-midnight mb-4">
