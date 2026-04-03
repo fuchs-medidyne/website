@@ -12,7 +12,6 @@ const navItems = [
     label: "KI Lösungen",
     href: "/ki-loesungen",
     children: [
-      { label: "Übersicht", href: "/ki-loesungen" },
       { label: "Self-Check-In Terminal", href: "/ki-loesungen/self-check-in" },
     ],
   },
