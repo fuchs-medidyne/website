@@ -32,7 +32,7 @@ export default function KiLoesungenPage() {
   return (
     <>
       {/* ─── Hero ─── */}
-      <section className="relative pt-28 pb-14 overflow-hidden">
+      <section className="relative min-h-[30vh] flex items-center pt-24 pb-10 overflow-hidden">
         <div className="absolute inset-0 bg-cover bg-center" style={{ backgroundImage: `url('${heroBg.src}')` }} />
         <div className="absolute inset-0 bg-midnight/50" />
 
