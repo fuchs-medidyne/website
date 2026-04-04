@@ -2,7 +2,8 @@
 
 ## Projekt-Übersicht
 Website für die **Medidyne Systems GmbH** (Marke: EmMa.AI) — KI-Lösungen für Arztpraxen.
-Produktionswebsite unter: https://www.medidyne-systems.de/ (aktuell noch auf Hostinger, Migration zu Vercel geplant)
+Produktionswebsite unter: https://www.medidyne-systems.de/ (aktuell noch auf Hostinger)
+Preview unter: https://fuchs-medidyne.github.io/website/ (GitHub Pages)
 
 ## Das Team
 
@@ -21,7 +22,7 @@ Vollstaendige Profile: `Team/`, Verzeichnis: `Team/VERZEICHNIS.md`.
 - **Styling:** Tailwind CSS v4 (via `@import "tailwindcss"` in `globals.css`, Farben über `@theme` Block)
 - **Icons:** lucide-react
 - **Fonts:** Sora (Headlines) + Plus Jakarta Sans (Body) — geladen via `next/font/google`
-- **Deployment:** Vercel (Hobby Account)
+- **Deployment:** GitHub Pages (Static Export, automatisch via GitHub Actions)
 - **Package Manager:** npm
 
 ## Projektstruktur
@@ -44,7 +45,11 @@ src/
 public/
 └── images/
     ├── logo_medidyne.png    # Firmenlogo
-    └── hero_bg.png          # Hero-Hintergrundbild
+    ├── hero_bg.png          # Hero-Hintergrundbild
+    └── terminal_1-6.jpeg    # Self-Check-In Terminal Produktfotos
+.github/
+└── workflows/
+    └── deploy.yml           # GitHub Pages Auto-Deploy bei Push auf main
 ```
 
 ## Farbschema (aus dem Logo abgeleitet)
@@ -82,6 +87,7 @@ Definiert in `src/app/globals.css` im `@theme` Block. IMMER diese Farben verwend
 - **Animationen:** Nur `transform` und `opacity` animieren. Kein `transition-all`
 - **Interaktive Elemente:** Hover-, Focus- und Active-States für alle klickbaren Elemente
 - **Glasmorphismus:** Für Karten auf dunklem Hintergrund (`.glass` Klasse in globals.css)
+- **Hero-Banner:** Hintergrundbild mit `.hero-backdrop` Glas-Panel für Textlesbarkeit. Bilder via statische Imports (wegen basePath)
 - **Responsive:** Mobile-first, Hamburger-Menu auf kleinen Screens
 
 ## Local Dev
