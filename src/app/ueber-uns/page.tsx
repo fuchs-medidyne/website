@@ -60,18 +60,18 @@ export default function UeberUnsPage() {
       {/* ─── Hero ─── */}
       <section className="relative h-[35vh] min-h-[280px] flex items-center overflow-hidden">
         <div className="absolute inset-0 bg-cover bg-center" style={{ backgroundImage: `url('${heroBg.src}')` }} />
-        <div className="absolute inset-0 bg-midnight/70" />
+        <div className="absolute inset-0 bg-midnight/55" />
 
         <div className="relative z-10 mx-auto max-w-7xl px-6 lg:px-8 pt-24 pb-10 w-full text-center hero-text">
           <div className="max-w-3xl mx-auto">
             <p className="text-sm font-semibold uppercase tracking-widest text-violet mb-4">
               Über uns
             </p>
-            <h1 className="font-display text-3xl lg:text-4xl tracking-tight text-white mb-6">
+            <h1 className="font-display text-2xl lg:text-3xl tracking-tight text-white mb-4">
               Prozessdigitalisierung{" "}
               <span className="gradient-text">und Automatisierung</span>
             </h1>
-            <p className="text-lg text-white/50 leading-relaxed max-w-2xl mx-auto">
+            <p className="text-base text-white/50 leading-relaxed max-w-2xl mx-auto">
               Mit einem interdisziplinären Team aus der Medizin, der IT und
               der Betriebswirtschaft entwickeln wir innovative KI-Lösungen,
               die das Gesundheitssystem unterstützen.
