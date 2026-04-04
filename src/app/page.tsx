@@ -73,10 +73,10 @@ export default function HomePage() {
           className="absolute inset-0 bg-cover bg-center"
           style={{ backgroundImage: `url('${heroBg.src}')` }}
         />
-        <div className="absolute inset-0 bg-midnight/50" />
+        <div className="absolute inset-0 bg-midnight/70" />
         <div className="absolute inset-0 bg-gradient-to-b from-white/10 via-transparent to-white/20" />
 
-        <div className="relative z-10 mx-auto max-w-7xl px-6 lg:px-8 pt-24 pb-10 w-full">
+        <div className="relative z-10 mx-auto max-w-7xl px-6 lg:px-8 pt-24 pb-10 w-full hero-text">
           <div className="max-w-5xl mx-auto text-center">
             <h1 className="font-display text-3xl sm:text-4xl lg:text-5xl leading-[1.15] tracking-tight text-white mb-5">
               Prozessdigitalisierung{" "}

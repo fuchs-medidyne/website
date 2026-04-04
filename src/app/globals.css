@@ -38,6 +38,11 @@ body {
   background-size: 28px 28px;
 }
 
+/* Hero text shadow for readability */
+.hero-text {
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+}
+
 /* Gradient text utility */
 .gradient-text {
   background: linear-gradient(135deg, #B8DCE5 0%, #4DA3B5 40%, #8E6B87 100%);
