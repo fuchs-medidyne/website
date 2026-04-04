@@ -10,7 +10,7 @@ export default function ImpressumPage() {
   return (
     <>
       {/* ─── Hero ─── */}
-      <section className="relative min-h-[30vh] flex items-center pt-24 pb-10 overflow-hidden">
+      <section className="relative min-h-[45vh] flex items-center pt-24 pb-10 overflow-hidden">
         <div className="absolute inset-0 bg-cover bg-center" style={{ backgroundImage: `url('${heroBg.src}')` }} />
         <div className="absolute inset-0 bg-midnight/50" />
         <div className="relative z-10 mx-auto max-w-7xl px-6 lg:px-8 text-center">
