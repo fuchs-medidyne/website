@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import heroBg from "../../../public/images/hero_bg.png";
 
 export const metadata: Metadata = {
   title: "Impressum",
@@ -9,7 +10,9 @@ export default function ImpressumPage() {
   return (
     <>
       {/* ─── Hero ─── */}
-      <section className="relative pt-28 pb-10 bg-gradient-to-br from-midnight via-void to-abyss">
+      <section className="relative pt-28 pb-10 overflow-hidden">
+        <div className="absolute inset-0 bg-cover bg-center" style={{ backgroundImage: `url('${heroBg.src}')` }} />
+        <div className="absolute inset-0 bg-midnight/50" />
         <div className="relative z-10 mx-auto max-w-7xl px-6 lg:px-8 text-center">
           <h1 className="font-display text-3xl tracking-tight text-white">
             Impressum

@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Image from "next/image";
+import heroBg from "../../../public/images/hero_bg.png";
 import { Users, Heart, TrendingUp } from "lucide-react";
 
 export const metadata: Metadata = {
@@ -57,9 +58,9 @@ export default function UeberUnsPage() {
   return (
     <>
       {/* ─── Hero ─── */}
-      <section className="relative pt-28 pb-14 bg-gradient-to-br from-midnight via-void to-abyss overflow-hidden">
-        <div className="absolute inset-0 dot-grid opacity-40" />
-        <div className="absolute top-32 right-[20%] w-64 h-64 rounded-full bg-violet/8 blur-3xl" />
+      <section className="relative pt-28 pb-14 overflow-hidden">
+        <div className="absolute inset-0 bg-cover bg-center" style={{ backgroundImage: `url('${heroBg.src}')` }} />
+        <div className="absolute inset-0 bg-midnight/50" />
 
         <div className="relative z-10 mx-auto max-w-7xl px-6 lg:px-8 text-center">
           <div className="max-w-3xl mx-auto">

@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { Cloud, ArrowRight, CheckCircle } from "lucide-react";
+import heroBg from "../../../public/images/hero_bg.png";
 
 export const metadata: Metadata = {
   title: "KI Lösungen",
@@ -31,9 +32,9 @@ export default function KiLoesungenPage() {
   return (
     <>
       {/* ─── Hero ─── */}
-      <section className="relative pt-28 pb-14 bg-gradient-to-br from-midnight via-void to-abyss overflow-hidden">
-        <div className="absolute inset-0 dot-grid opacity-40" />
-        <div className="absolute bottom-20 left-[15%] w-72 h-72 rounded-full bg-violet/8 blur-3xl" />
+      <section className="relative pt-28 pb-14 overflow-hidden">
+        <div className="absolute inset-0 bg-cover bg-center" style={{ backgroundImage: `url('${heroBg.src}')` }} />
+        <div className="absolute inset-0 bg-midnight/50" />
 
         <div className="relative z-10 mx-auto max-w-7xl px-6 lg:px-8 text-center">
           <div className="max-w-3xl mx-auto">

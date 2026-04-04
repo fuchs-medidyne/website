@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
+import heroBg from "../../../../public/images/hero_bg.png";
 import terminal1 from "../../../../public/images/terminal_1.jpeg";
 import terminal2 from "../../../../public/images/terminal_2.jpeg";
 import terminal3 from "../../../../public/images/terminal_3.jpeg";
@@ -122,9 +123,9 @@ export default function SelfCheckInPage() {
   return (
     <>
       {/* ─── Hero ─── */}
-      <section className="relative pt-28 pb-14 bg-gradient-to-br from-midnight via-void to-abyss overflow-hidden">
-        <div className="absolute inset-0 dot-grid opacity-40" />
-        <div className="absolute top-40 right-[10%] w-80 h-80 rounded-full bg-violet/8 blur-3xl" />
+      <section className="relative pt-28 pb-14 overflow-hidden">
+        <div className="absolute inset-0 bg-cover bg-center" style={{ backgroundImage: `url('${heroBg.src}')` }} />
+        <div className="absolute inset-0 bg-midnight/50" />
 
         <div className="relative z-10 mx-auto max-w-7xl px-6 lg:px-8 text-center">
           <div className="max-w-3xl mx-auto">

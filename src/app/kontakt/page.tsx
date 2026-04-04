@@ -2,6 +2,7 @@
 
 import { useState, type FormEvent } from "react";
 import { Mail, MapPin, Send, CheckCircle } from "lucide-react";
+import heroBg from "../../../public/images/hero_bg.png";
 
 export default function KontaktPage() {
   const [submitted, setSubmitted] = useState(false);
@@ -19,8 +20,9 @@ export default function KontaktPage() {
   return (
     <>
       {/* ─── Hero ─── */}
-      <section className="relative pt-28 pb-12 bg-gradient-to-br from-midnight via-void to-abyss overflow-hidden">
-        <div className="absolute inset-0 dot-grid opacity-40" />
+      <section className="relative pt-28 pb-12 overflow-hidden">
+        <div className="absolute inset-0 bg-cover bg-center" style={{ backgroundImage: `url('${heroBg.src}')` }} />
+        <div className="absolute inset-0 bg-midnight/50" />
 
         <div className="relative z-10 mx-auto max-w-7xl px-6 lg:px-8 text-center">
           <div className="max-w-3xl mx-auto">
