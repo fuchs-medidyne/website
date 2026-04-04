@@ -68,7 +68,8 @@ export default function Header() {
                   onMouseEnter={() => setDropdownOpen(true)}
                   onMouseLeave={() => setDropdownOpen(false)}
                 >
-                  <button
+                  <Link
+                    href={item.href}
                     className={`flex items-center gap-1 px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200 ${
                       isActive(item.href)
                         ? "text-violet bg-violet/5"
@@ -81,7 +82,7 @@ export default function Header() {
                         dropdownOpen ? "rotate-180" : ""
                       }`}
                     />
-                  </button>
+                  </Link>
 
                   <div
                     className={`absolute top-full left-0 pt-2 transition-all duration-200 ${
