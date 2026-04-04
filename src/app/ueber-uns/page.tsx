@@ -58,7 +58,7 @@ export default function UeberUnsPage() {
   return (
     <>
       {/* ─── Hero ─── */}
-      <section className="relative min-h-[45vh] flex items-center pt-24 pb-10 overflow-hidden">
+      <section className="relative min-h-[30vh] flex items-center pt-24 pb-10 overflow-hidden">
         <div className="absolute inset-0 bg-cover bg-center" style={{ backgroundImage: `url('${heroBg.src}')` }} />
         <div className="absolute inset-0 bg-midnight/50" />
 
