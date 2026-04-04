@@ -89,21 +89,6 @@ export default function HomePage() {
               schaffen Sie Zeit für wertschöpfende Aufgaben.
             </p>
 
-            <div className="flex flex-wrap justify-center gap-3">
-              <Link
-                href="/kontakt"
-                className="group inline-flex items-center gap-2 bg-violet hover:bg-iris text-white px-6 py-3 rounded-full font-semibold transition-all duration-300 hover:shadow-[0_0_24px_rgba(46,125,142,0.4)]"
-              >
-                Kontakt aufnehmen
-                <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
-              </Link>
-              <Link
-                href="/ki-loesungen"
-                className="inline-flex items-center gap-2 px-6 py-3 rounded-full font-semibold text-white/80 border border-white/20 hover:border-white/40 hover:text-white transition-all duration-300 hover:bg-white/5"
-              >
-                Unsere Lösungen
-              </Link>
-            </div>
           </div>
 
           {/* Feature-Punkte auf dem Hero */}
