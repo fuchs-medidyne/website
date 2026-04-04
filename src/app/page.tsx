@@ -70,7 +70,7 @@ export default function HomePage() {
       <section className="relative min-h-[30vh] flex items-center overflow-hidden">
         <div
           className="absolute inset-0 bg-cover bg-center"
-          style={{ backgroundImage: "url('/images/hero_bg.png')" }}
+          style={{ backgroundImage: "url('/website/images/hero_bg.png')" }}
         />
         <div className="absolute inset-0 bg-midnight/70" />
         <div className="absolute inset-0 bg-gradient-to-b from-white/10 via-transparent to-white/20" />
