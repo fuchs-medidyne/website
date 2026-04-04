@@ -68,7 +68,7 @@ export default function HomePage() {
   return (
     <>
       {/* ─── Hero ─── */}
-      <section className="relative h-[35vh] min-h-[280px] flex items-center overflow-hidden">
+      <section className="relative overflow-hidden">
         <div
           className="absolute inset-0 bg-cover bg-center"
           style={{ backgroundImage: `url('${heroBg.src}')` }}
@@ -76,8 +76,8 @@ export default function HomePage() {
         <div className="absolute inset-0 bg-midnight/70" />
         <div className="absolute inset-0 bg-gradient-to-b from-white/10 via-transparent to-white/20" />
 
-        <div className="relative z-10 mx-auto max-w-7xl px-6 lg:px-8 pt-24 pb-10 w-full hero-text">
-          <div className="max-w-5xl mx-auto text-center">
+        <div className="relative z-10 mx-auto max-w-7xl px-6 lg:px-8 pt-28 pb-16 w-full hero-text">
+          <div className="max-w-5xl mx-auto text-center mb-12">
             <h1 className="font-display text-3xl sm:text-4xl lg:text-5xl leading-[1.15] tracking-tight text-white mb-5">
               Prozessdigitalisierung{" "}
               <span className="gradient-text">und Automatisierung</span>{" "}
@@ -105,35 +105,27 @@ export default function HomePage() {
               </Link>
             </div>
           </div>
-        </div>
 
-        <div className="absolute bottom-0 left-0 right-0 h-20 bg-gradient-to-t from-white to-transparent" />
-      </section>
-
-      {/* ─── Effizienz steigern ─── */}
-      <section className="py-14 bg-white">
-        <div className="mx-auto max-w-7xl px-6 lg:px-8">
-          <div className="text-center mb-10">
-            <h2 className="font-display text-2xl lg:text-3xl tracking-tight text-midnight">
-              Effizienz{" "}
-              <span className="gradient-text-dark">steigern</span>
-            </h2>
-          </div>
-
-          <div className="max-w-2xl mx-auto space-y-4">
-            {efficiencyPoints.map((point) => (
-              <div
-                key={point}
-                className="flex items-start gap-4 p-5 rounded-xl bg-snow border border-violet/5 hover:shadow-lg hover:shadow-violet/5 transition-all duration-300"
-              >
-                <CheckCircle className="w-5 h-5 text-violet shrink-0 mt-0.5" />
-                <span className="text-midnight/70 leading-relaxed">
-                  {point}
-                </span>
+          {/* Feature-Punkte auf dem Hero */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
+            {[
+              { title: "Effizienz steigern", desc: "Optimierung der Praxisabläufe durch KI-Technologie" },
+              { title: "Innovative Lösungen", desc: "Verbesserung der Patientenversorgung durch automatisierte Prozesse" },
+              { title: "KI-gestützte Automatisierung", desc: "Entlastung für Ärzte und medizinisches Fachpersonal" },
+            ].map((item) => (
+              <div key={item.title} className="text-center">
+                <h3 className="text-lg font-semibold text-white mb-2">
+                  {item.title}
+                </h3>
+                <p className="text-sm text-white/50 leading-relaxed">
+                  {item.desc}
+                </p>
               </div>
             ))}
           </div>
         </div>
+
+        <div className="absolute bottom-0 left-0 right-0 h-20 bg-gradient-to-t from-white to-transparent" />
       </section>
 
       {/* ─── KI-gestützte Automatisierung ─── */}
