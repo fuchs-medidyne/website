@@ -38,9 +38,12 @@ body {
   background-size: 28px 28px;
 }
 
-/* Hero text shadow for readability */
-.hero-text {
-  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.6), 0 1px 4px rgba(0, 0, 0, 0.4);
+/* Hero text backdrop for readability over any background */
+.hero-backdrop {
+  background: rgba(9, 26, 31, 0.55);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border-radius: 1rem;
 }
 
 /* Gradient text utility */

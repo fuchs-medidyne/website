@@ -76,37 +76,37 @@ export default function HomePage() {
         <div className="absolute inset-0 bg-midnight/40" />
         <div className="absolute inset-0 bg-gradient-to-b from-white/10 via-transparent to-white/20" />
 
-        <div className="relative z-10 mx-auto max-w-7xl px-6 lg:px-8 pt-28 pb-16 w-full hero-text">
-          <div className="max-w-5xl mx-auto text-center mb-12">
-            <h1 className="font-display text-3xl sm:text-4xl lg:text-5xl leading-[1.15] tracking-tight text-white mb-5">
-              Prozessdigitalisierung{" "}
-              <span className="gradient-text">und Automatisierung</span>{" "}
-              für moderne Arztpraxen
-            </h1>
+        <div className="relative z-10 mx-auto max-w-7xl px-6 lg:px-8 pt-28 pb-16 w-full">
+          <div className="max-w-5xl mx-auto hero-backdrop px-8 py-8">
+            <div className="text-center mb-8">
+              <h1 className="font-display text-3xl sm:text-4xl lg:text-5xl leading-[1.15] tracking-tight text-white mb-5">
+                Prozessdigitalisierung und Automatisierung
+                für moderne Arztpraxen
+              </h1>
 
-            <p className="text-base sm:text-lg text-white/60 max-w-2xl mx-auto leading-relaxed mb-8">
-              Entlasten Sie medizinisches Personal durch digitale Lösungen und
-              schaffen Sie Zeit für wertschöpfende Aufgaben.
-            </p>
+              <p className="text-base sm:text-lg text-white/70 max-w-2xl mx-auto leading-relaxed">
+                Entlasten Sie medizinisches Personal durch digitale Lösungen und
+                schaffen Sie Zeit für wertschöpfende Aufgaben.
+              </p>
+            </div>
 
-          </div>
-
-          {/* Feature-Punkte auf dem Hero */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
-            {[
-              { title: "Effizienz steigern", desc: "Optimierung der Praxisabläufe durch KI-Technologie" },
-              { title: "Innovative Lösungen", desc: "Verbesserung der Patientenversorgung durch automatisierte Prozesse" },
-              { title: "KI-gestützte Automatisierung", desc: "Entlastung für Ärzte und medizinisches Fachpersonal" },
-            ].map((item) => (
-              <div key={item.title} className="text-center">
-                <h3 className="text-lg font-semibold text-white mb-2">
-                  {item.title}
-                </h3>
-                <p className="text-sm text-white/50 leading-relaxed">
-                  {item.desc}
-                </p>
-              </div>
-            ))}
+            {/* Feature-Punkte */}
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+              {[
+                { title: "Effizienz steigern", desc: "Optimierung der Praxisabläufe durch KI-Technologie" },
+                { title: "Innovative Lösungen", desc: "Verbesserung der Patientenversorgung durch automatisierte Prozesse" },
+                { title: "KI-gestützte Automatisierung", desc: "Entlastung für Ärzte und medizinisches Fachpersonal" },
+              ].map((item) => (
+                <div key={item.title} className="text-center">
+                  <h3 className="text-lg font-semibold text-white mb-2">
+                    {item.title}
+                  </h3>
+                  <p className="text-sm text-white/60 leading-relaxed">
+                    {item.desc}
+                  </p>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
 
