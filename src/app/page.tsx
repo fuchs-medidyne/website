@@ -77,8 +77,8 @@ export default function HomePage() {
         <div className="absolute inset-0 bg-gradient-to-b from-white/10 via-transparent to-white/20" />
 
         <div className="relative z-10 mx-auto max-w-7xl px-6 lg:px-8 pt-28 pb-16 w-full">
-          <div className="max-w-5xl mx-auto hero-backdrop px-8 py-8">
-            <div className="text-center mb-8">
+          <div className="hero-backdrop px-8 py-8">
+            <div className="max-w-5xl mx-auto text-center mb-8">
               <h1 className="font-display text-3xl sm:text-4xl lg:text-5xl leading-[1.15] tracking-tight text-white mb-5">
                 Prozessdigitalisierung und Automatisierung
                 für moderne Arztpraxen
@@ -91,7 +91,7 @@ export default function HomePage() {
             </div>
 
             {/* Feature-Punkte */}
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
               {[
                 { title: "Effizienz steigern", desc: "Optimierung der Praxisabläufe durch KI-Technologie" },
                 { title: "Innovative Lösungen", desc: "Verbesserung der Patientenversorgung durch automatisierte Prozesse" },

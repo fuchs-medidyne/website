@@ -128,7 +128,7 @@ export default function SelfCheckInPage() {
         <div className="absolute inset-0 bg-midnight/40" />
 
         <div className="relative z-10 mx-auto max-w-7xl px-6 lg:px-8 pt-20 pb-8 w-full text-center">
-          <div className="max-w-3xl mx-auto hero-backdrop px-8 py-6">
+          <div className="hero-backdrop px-8 py-6">
             <p className="text-sm font-semibold uppercase tracking-widest text-white/80 mb-4">
               Produktdetails
             </p>
