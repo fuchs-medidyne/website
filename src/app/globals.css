@@ -40,7 +40,7 @@ body {
 
 /* Hero text backdrop for readability over any background */
 .hero-backdrop {
-  background: rgba(9, 26, 31, 0.35);
+  background: rgba(9, 26, 31, 0.15);
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
   border-radius: 1rem;
