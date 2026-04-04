@@ -12,8 +12,8 @@ export default function DatenschutzPage() {
       {/* ─── Hero ─── */}
       <section className="relative h-[35vh] min-h-[280px] flex items-center overflow-hidden">
         <div className="absolute inset-0 bg-cover bg-center" style={{ backgroundImage: `url('${heroBg.src}')` }} />
-        <div className="absolute inset-0 bg-midnight/55" />
-        <div className="relative z-10 mx-auto max-w-7xl px-6 lg:px-8 pt-24 pb-10 w-full text-center hero-text">
+        <div className="absolute inset-0 bg-midnight/40" />
+        <div className="relative z-10 mx-auto max-w-7xl px-6 lg:px-8 pt-20 pb-8 w-full text-center hero-text">
           <h1 className="font-display text-2xl lg:text-3xl tracking-tight text-white">
             Datenschutzrichtlinie
           </h1>
