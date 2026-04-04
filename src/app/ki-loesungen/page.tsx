@@ -32,11 +32,11 @@ export default function KiLoesungenPage() {
   return (
     <>
       {/* ─── Hero ─── */}
-      <section className="relative min-h-[30vh] flex items-center pt-24 pb-10 overflow-hidden">
+      <section className="relative min-h-[30vh] flex items-center overflow-hidden">
         <div className="absolute inset-0 bg-cover bg-center" style={{ backgroundImage: `url('${heroBg.src}')` }} />
         <div className="absolute inset-0 bg-midnight/50" />
 
-        <div className="relative z-10 mx-auto max-w-7xl px-6 lg:px-8 text-center">
+        <div className="relative z-10 mx-auto max-w-7xl px-6 lg:px-8 pt-24 pb-10 w-full text-center">
           <div className="max-w-3xl mx-auto">
             <p className="text-sm font-semibold uppercase tracking-widest text-violet mb-4">
               EmMa Plattform

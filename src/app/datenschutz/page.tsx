@@ -10,10 +10,10 @@ export default function DatenschutzPage() {
   return (
     <>
       {/* ─── Hero ─── */}
-      <section className="relative min-h-[30vh] flex items-center pt-24 pb-10 overflow-hidden">
+      <section className="relative min-h-[30vh] flex items-center overflow-hidden">
         <div className="absolute inset-0 bg-cover bg-center" style={{ backgroundImage: `url('${heroBg.src}')` }} />
         <div className="absolute inset-0 bg-midnight/50" />
-        <div className="relative z-10 mx-auto max-w-7xl px-6 lg:px-8 text-center">
+        <div className="relative z-10 mx-auto max-w-7xl px-6 lg:px-8 pt-24 pb-10 w-full text-center">
           <h1 className="font-display text-3xl tracking-tight text-white">
             Datenschutzrichtlinie
           </h1>
