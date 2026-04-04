@@ -5,6 +5,12 @@ Website für die **Medidyne Systems GmbH** (Marke: EmMa.AI) — KI-Lösungen fü
 Produktionswebsite unter: https://www.medidyne-systems.de/ (aktuell noch auf Hostinger)
 Preview unter: https://fuchs-medidyne.github.io/website/ (GitHub Pages)
 
+## Steuerungsebene
+
+Planung und Weiterentwicklung werden auf der uebergeordneten Steuerungsebene koordiniert.
+Aktuelle Plaene und Roadmaps: `../Plaene/Website/`
+Bei Session-Start relevante Plaene pruefen falls vorhanden.
+
 ## Das Team
 
 Die Website hat ein eigenes Projekt-Team. Schnittstelle zur Steuerungsebene ist der Web-Leiter.
