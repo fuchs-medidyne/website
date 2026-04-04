@@ -1,5 +1,12 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
+import terminal1 from "../../../../public/images/terminal_1.jpeg";
+import terminal2 from "../../../../public/images/terminal_2.jpeg";
+import terminal3 from "../../../../public/images/terminal_3.jpeg";
+import terminal4 from "../../../../public/images/terminal_4.jpeg";
+import terminal5 from "../../../../public/images/terminal_5.jpeg";
+import terminal6 from "../../../../public/images/terminal_6.jpeg";
 import {
   ArrowRight,
   UserCheck,
@@ -215,6 +222,37 @@ export default function SelfCheckInPage() {
                 </ul>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ─── Terminal Galerie ─── */}
+      <section className="py-16 lg:py-20 bg-snow">
+        <div className="mx-auto max-w-7xl px-6 lg:px-8">
+          <div className="text-center mb-10">
+            <p className="text-sm font-semibold uppercase tracking-widest text-violet mb-3">
+              Impressionen
+            </p>
+            <h2 className="font-display text-2xl lg:text-3xl tracking-tight text-midnight">
+              Das Terminal im Einsatz
+            </h2>
+          </div>
+
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
+            {[terminal1, terminal2, terminal3, terminal4, terminal5, terminal6].map(
+              (img, i) => (
+                <div
+                  key={i}
+                  className="rounded-2xl overflow-hidden border border-violet/5 hover:shadow-xl hover:shadow-violet/5 transition-all duration-500"
+                >
+                  <Image
+                    src={img}
+                    alt={`Self-Check-In Terminal Ansicht ${i + 1}`}
+                    className="w-full h-auto object-cover"
+                  />
+                </div>
+              )
+            )}
           </div>
         </div>
       </section>
