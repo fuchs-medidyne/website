@@ -5,6 +5,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { Menu, X, ChevronDown } from "lucide-react";
+import logoMedidyne from "../../public/images/logo_medidyne.png";
 const navItems = [
   { label: "Startseite", href: "/" },
   { label: "Über uns", href: "/ueber-uns" },
@@ -48,7 +49,7 @@ export default function Header() {
           {/* Logo */}
           <Link href="/" className="shrink-0">
             <Image
-              src="/images/logo_medidyne.png"
+              src={logoMedidyne}
               alt="Medidyne Systems"
               width={200}
               height={50}

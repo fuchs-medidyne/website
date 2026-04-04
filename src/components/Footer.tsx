@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { Mail, MapPin } from "lucide-react";
+import logoMedidyne from "../../public/images/logo_medidyne.png";
 
 export default function Footer() {
   return (
@@ -12,7 +13,7 @@ export default function Footer() {
           <div>
             <Link href="/" className="inline-block mb-4">
               <Image
-                src="/images/logo_medidyne.png"
+                src={logoMedidyne}
                 alt="Medidyne Systems"
                 width={180}
                 height={45}
