@@ -13,8 +13,8 @@ export default function ImpressumPage() {
       <section className="relative h-[28vh] min-h-[220px] overflow-hidden">
         <div className="absolute inset-0 bg-cover bg-center" style={{ backgroundImage: `url('${heroBg.src}')` }} />
         <div className="absolute inset-0 bg-midnight/40" />
-        <div className="relative z-10 mx-auto max-w-7xl px-6 lg:px-8 pt-20 pb-8 w-full text-center">
-          <div className="hero-backdrop px-8 py-6">
+        <div className="relative z-10 mx-auto max-w-7xl px-6 lg:px-8 pt-[4.5rem] pb-6 w-full text-center">
+          <div className="hero-backdrop px-8 py-5">
             <h1 className="font-display text-2xl lg:text-3xl tracking-tight text-white">
               Impressum
             </h1>

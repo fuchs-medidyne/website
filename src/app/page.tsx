@@ -76,15 +76,15 @@ export default function HomePage() {
         <div className="absolute inset-0 bg-midnight/40" />
         <div className="absolute inset-0 bg-gradient-to-b from-white/10 via-transparent to-white/20" />
 
-        <div className="relative z-10 mx-auto max-w-7xl px-6 lg:px-8 pt-24 pb-12 w-full">
-          <div className="hero-backdrop px-8 py-8">
+        <div className="relative z-10 mx-auto max-w-7xl px-6 lg:px-8 pt-[4.5rem] pb-6 w-full">
+          <div className="hero-backdrop px-8 py-6">
             <div className="max-w-5xl mx-auto text-center">
-              <h1 className="hero-title-shadow font-display text-3xl sm:text-4xl lg:text-5xl leading-[1.15] tracking-tight text-white mb-5">
+              <h1 className="hero-title-shadow font-display text-2xl sm:text-3xl lg:text-4xl leading-[1.15] tracking-tight text-white mb-4">
                 Prozessdigitalisierung und Automatisierung
                 für moderne Arztpraxen
               </h1>
 
-              <p className="text-base sm:text-lg text-white/70 max-w-2xl mx-auto leading-relaxed">
+              <p className="hero-text-shadow text-sm sm:text-base text-white/80 max-w-2xl mx-auto leading-relaxed">
                 Entlasten Sie medizinisches Personal durch digitale Lösungen und
                 schaffen Sie Zeit für wertschöpfende Aufgaben.
               </p>

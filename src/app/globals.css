@@ -65,6 +65,11 @@ body {
   text-shadow: 0 2px 8px rgba(9, 26, 31, 0.5);
 }
 
+/* Hero description text — subtle shadow for readability */
+.hero-text-shadow {
+  text-shadow: 0 1px 6px rgba(9, 26, 31, 0.5), 0 0 10px rgba(9, 26, 31, 0.2);
+}
+
 /* Gradient text utility */
 .gradient-text {
   background: linear-gradient(135deg, #B8DCE5 0%, #4DA3B5 40%, #8E6B87 100%);
