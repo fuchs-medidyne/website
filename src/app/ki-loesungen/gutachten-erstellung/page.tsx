@@ -40,7 +40,7 @@ const features = [
 export default function GutachtenErstellungPage() {
   return (
     <>
-      <section className="relative h-[240px] overflow-hidden">
+      <section className="relative h-[260px] overflow-hidden">
         <div className="absolute inset-0 bg-cover bg-center" style={{ backgroundImage: `url('${heroBg.src}')` }} />
         <div className="absolute inset-0 bg-midnight/40" />
 
@@ -50,7 +50,7 @@ export default function GutachtenErstellungPage() {
             <h1 className="hero-title-shadow font-display text-2xl lg:text-4xl tracking-tight text-white mb-3">
               Gutachten-Erstellung
             </h1>
-            <p className="hero-text-shadow text-sm text-white/80 leading-relaxed max-w-2xl mx-auto">
+            <p className="hero-text-shadow text-sm text-black leading-relaxed max-w-2xl mx-auto">
               Erstellen Sie medizinische Gutachten, Atteste und Arztbriefe schneller und präziser.
               Laden Sie relevante Unterlagen hoch — die KI analysiert diese und erstellt einen
               strukturierten Entwurf zur Nachbearbeitung.

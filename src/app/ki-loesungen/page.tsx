@@ -94,19 +94,19 @@ export default function KiLoesungenPage() {
   return (
     <>
       {/* ─── Hero ─── */}
-      <section className="relative h-[240px] overflow-hidden">
+      <section className="relative h-[260px] overflow-hidden">
         <div className="absolute inset-0 bg-cover bg-center" style={{ backgroundImage: `url('${heroBg.src}')` }} />
         <div className="absolute inset-0 bg-midnight/40" />
 
         <div className="relative z-10 mx-auto max-w-7xl px-6 lg:px-8 pt-[4.5rem] pb-6 w-full text-center">
           <div className="hero-backdrop px-8 py-5">
-            <p className="text-sm font-semibold uppercase tracking-widest text-white/80 mb-3">
+            <p className="text-sm font-semibold uppercase tracking-widest text-black mb-3">
               EmMa Plattform
             </p>
             <h1 className="hero-title-shadow font-display text-2xl lg:text-4xl tracking-tight text-white mb-3">
               KI Lösungen für Arztpraxen
             </h1>
-            <p className="hero-text-shadow text-sm text-white/80 leading-relaxed max-w-2xl mx-auto">
+            <p className="hero-text-shadow text-sm text-black leading-relaxed max-w-2xl mx-auto">
               Verwaltungsaufgaben in Arztpraxen automatisiert — medizinisches
               Personal entlasten und die Patientenversorgung optimieren.
             </p>

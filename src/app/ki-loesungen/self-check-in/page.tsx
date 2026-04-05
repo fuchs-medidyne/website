@@ -123,7 +123,7 @@ export default function SelfCheckInPage() {
   return (
     <>
       {/* ─── Hero ─── */}
-      <section className="relative h-[240px] overflow-hidden">
+      <section className="relative h-[260px] overflow-hidden">
         <div className="absolute inset-0 bg-cover bg-center" style={{ backgroundImage: `url('${heroBg.src}')` }} />
         <div className="absolute inset-0 bg-midnight/40" />
 
@@ -135,7 +135,7 @@ export default function SelfCheckInPage() {
             <h1 className="hero-title-shadow font-display text-2xl lg:text-4xl tracking-tight text-white mb-3">
               Self-Check-In Terminal für Patienten
             </h1>
-            <p className="hero-text-shadow text-sm text-white/80 leading-relaxed max-w-2xl mx-auto">
+            <p className="hero-text-shadow text-sm text-black leading-relaxed max-w-2xl mx-auto">
               Ermöglichen Sie einen schnellen, kontaktarmen und intuitiven
               Praxisempfang. Die Touchscreen-basierte Selbstanmeldung ist
               speziell für den medizinischen Einsatz konzipiert: klar

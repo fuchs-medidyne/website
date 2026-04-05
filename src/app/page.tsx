@@ -68,7 +68,7 @@ export default function HomePage() {
   return (
     <>
       {/* ─── Hero ─── */}
-      <section className="relative h-[240px] overflow-hidden">
+      <section className="relative h-[260px] overflow-hidden">
         <div
           className="absolute inset-0 bg-cover bg-center"
           style={{ backgroundImage: `url('${heroBg.src}')` }}
@@ -84,7 +84,7 @@ export default function HomePage() {
                 für moderne Arztpraxen
               </h1>
 
-              <p className="hero-text-shadow text-sm sm:text-base text-white/80 max-w-2xl mx-auto leading-relaxed">
+              <p className="hero-text-shadow text-sm sm:text-base text-black max-w-2xl mx-auto leading-relaxed">
                 Entlasten Sie medizinisches Personal durch digitale Lösungen und
                 schaffen Sie Zeit für wertschöpfende Aufgaben.
               </p>
