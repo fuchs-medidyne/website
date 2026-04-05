@@ -148,14 +148,11 @@ export default function SelfCheckInPage() {
       </section>
 
       {/* ─── Benefits ─── */}
-      <section className="py-16 lg:py-20 bg-snow">
+      <section className="py-14 bg-white">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="text-center mb-10">
-            <p className="text-sm font-semibold uppercase tracking-widest text-violet mb-3">
-              Vorteile
-            </p>
             <h2 className="font-display text-2xl lg:text-3xl tracking-tight text-midnight">
-              Warum Self-Check-In?
+              Funktionen
             </h2>
           </div>
 
@@ -163,15 +160,15 @@ export default function SelfCheckInPage() {
             {benefits.map((b) => (
               <div
                 key={b.title}
-                className="group p-8 rounded-2xl bg-white border border-violet/5 shadow-sm hover:shadow-xl hover:shadow-violet/5 transition-all duration-500 hover:-translate-y-1"
+                className="p-6 rounded-xl bg-snow border border-violet/5"
               >
-                <div className="w-12 h-12 rounded-xl bg-violet/8 flex items-center justify-center mb-6 group-hover:bg-violet/15 transition-colors">
-                  <b.icon className="w-6 h-6 text-violet" />
+                <div className="w-10 h-10 rounded-lg bg-violet/8 flex items-center justify-center mb-4">
+                  <b.icon className="w-5 h-5 text-violet" />
                 </div>
                 <h3 className="text-lg font-semibold text-midnight mb-2">
                   {b.title}
                 </h3>
-                <p className="text-sm text-midnight/50 leading-relaxed">
+                <p className="text-sm text-midnight/55 leading-relaxed">
                   {b.description}
                 </p>
               </div>
