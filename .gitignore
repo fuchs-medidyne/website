@@ -39,4 +39,8 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 
-.vercel
+# Claude Code (Entwicklungs-Werkzeuge, nicht Teil der Software)
+.claude/
+Team/
+CLAUDE.md
+tmpclaude-*
