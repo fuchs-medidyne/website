@@ -129,7 +129,7 @@ export default function SelfCheckInPage() {
 
         <div className="relative z-10 mx-auto max-w-7xl px-6 lg:px-8 pt-[4.5rem] pb-6 w-full text-center">
           <div className="hero-backdrop-module px-8 py-5">
-            <p className="module-label text-base font-semibold uppercase tracking-widest text-mauve-light mb-3">
+            <p className="module-label text-base font-semibold uppercase tracking-widest text-white mb-3">
               EmMa Modul
             </p>
             <h1 className="hero-title-shadow font-display text-2xl lg:text-4xl tracking-tight text-white mb-3">
