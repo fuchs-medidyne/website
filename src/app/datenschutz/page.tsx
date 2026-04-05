@@ -10,7 +10,7 @@ export default function DatenschutzPage() {
   return (
     <>
       {/* ─── Hero ─── */}
-      <section className="relative h-[260px] overflow-hidden">
+      <section className="relative h-[280px] overflow-hidden">
         <div className="absolute inset-0 bg-cover bg-center" style={{ backgroundImage: `url('${heroBg.src}')` }} />
         <div className="absolute inset-0 bg-midnight/40" />
         <div className="relative z-10 mx-auto max-w-7xl px-6 lg:px-8 pt-[4.5rem] pb-6 w-full text-center">
@@ -20,7 +20,7 @@ export default function DatenschutzPage() {
             </h1>
           </div>
         </div>
-        <div className="absolute bottom-0 left-0 right-0 h-20 bg-gradient-to-t from-snow to-transparent" />
+        <div className="absolute bottom-0 left-0 right-0 h-10 bg-gradient-to-t from-snow to-transparent" />
       </section>
 
       {/* ─── Content ─── */}

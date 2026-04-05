@@ -68,7 +68,7 @@ export default function HomePage() {
   return (
     <>
       {/* ─── Hero ─── */}
-      <section className="relative h-[260px] overflow-hidden">
+      <section className="relative h-[280px] overflow-hidden">
         <div
           className="absolute inset-0 bg-cover bg-center"
           style={{ backgroundImage: `url('${heroBg.src}')` }}

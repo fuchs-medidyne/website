@@ -20,7 +20,7 @@ export default function KontaktPage() {
   return (
     <>
       {/* ─── Hero ─── */}
-      <section className="relative h-[260px] overflow-hidden">
+      <section className="relative h-[280px] overflow-hidden">
         <div className="absolute inset-0 bg-cover bg-center" style={{ backgroundImage: `url('${heroBg.src}')` }} />
         <div className="absolute inset-0 bg-midnight/40" />
 
@@ -40,7 +40,7 @@ export default function KontaktPage() {
           </div>
         </div>
 
-        <div className="absolute bottom-0 left-0 right-0 h-20 bg-gradient-to-t from-snow to-transparent" />
+        <div className="absolute bottom-0 left-0 right-0 h-10 bg-gradient-to-t from-snow to-transparent" />
       </section>
 
       {/* ─── Form + Contact Info ─── */}
