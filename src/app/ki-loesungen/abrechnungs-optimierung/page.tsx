@@ -50,8 +50,8 @@ export default function AbrechnungsOptimierungPage() {
         <div className="absolute inset-0 bg-midnight/40" />
 
         <div className="relative z-10 mx-auto max-w-7xl px-6 lg:px-8 pt-20 pb-8 w-full text-center">
-          <div className="hero-backdrop px-8 py-6">
-            <p className="text-sm font-semibold uppercase tracking-widest text-white/80 mb-4">EmMa Modul</p>
+          <div className="hero-backdrop-module px-8 py-6">
+            <p className="text-sm font-semibold uppercase tracking-widest text-mauve-light mb-4">EmMa Modul</p>
             <h1 className="font-display text-2xl lg:text-3xl tracking-tight text-white mb-4">
               Abrechnungs-Optimierung
             </h1>

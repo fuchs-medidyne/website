@@ -46,6 +46,15 @@ body {
   border-radius: 1rem;
 }
 
+/* Module subpage hero backdrop — subtle mauve tint */
+.hero-backdrop-module {
+  background: rgba(142, 107, 135, 0.15);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border-radius: 1rem;
+  border: 1px solid rgba(142, 107, 135, 0.12);
+}
+
 /* Gradient text utility */
 .gradient-text {
   background: linear-gradient(135deg, #B8DCE5 0%, #4DA3B5 40%, #8E6B87 100%);
