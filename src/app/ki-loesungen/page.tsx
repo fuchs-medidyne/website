@@ -103,7 +103,7 @@ export default function KiLoesungenPage() {
             <p className="text-sm font-semibold uppercase tracking-widest text-white/80 mb-4">
               EmMa Plattform
             </p>
-            <h1 className="hero-title-shadow font-display text-2xl lg:text-3xl tracking-tight text-white mb-4">
+            <h1 className="hero-title-shadow font-display text-3xl lg:text-5xl tracking-tight text-white mb-4">
               KI Lösungen für Arztpraxen
             </h1>
             <p className="text-base text-white/70 leading-relaxed max-w-2xl mx-auto">
