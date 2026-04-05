@@ -40,7 +40,7 @@ const features = [
 export default function GutachtenErstellungPage() {
   return (
     <>
-      <section className="relative h-[35vh] min-h-[280px] flex items-center overflow-hidden">
+      <section className="relative overflow-hidden">
         <div className="absolute inset-0 bg-cover bg-center" style={{ backgroundImage: `url('${heroBg.src}')` }} />
         <div className="absolute inset-0 bg-midnight/40" />
 
