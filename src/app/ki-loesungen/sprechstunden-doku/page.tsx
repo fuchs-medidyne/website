@@ -40,7 +40,7 @@ const features = [
 export default function SprechstundenDokuPage() {
   return (
     <>
-      <section className="relative h-[28vh] min-h-[220px] overflow-hidden">
+      <section className="relative h-[240px] overflow-hidden">
         <div className="absolute inset-0 bg-cover bg-center" style={{ backgroundImage: `url('${heroBg.src}')` }} />
         <div className="absolute inset-0 bg-midnight/40" />
 
