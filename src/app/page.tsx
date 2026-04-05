@@ -19,7 +19,7 @@ import {
 import heroBg from "../../public/images/hero_bg.png";
 
 const efficiencyPoints = [
-  "Optimierung der Praxisabläufe durch KI-Technologie",
+  "Optimierung der Praxisabläufe durch Software und KI-Technologie",
   "Verbesserung der Patientenversorgung durch automatisierte Prozesse",
   "Entlastung für Ärzte und medizinisches Fachpersonal",
 ];
@@ -55,12 +55,14 @@ const useCases = [
   { icon: FileText, text: "Unterstützung zur Sprechstundendokumentation" },
   { icon: FileCheck, text: "Unterstützung bei der Gutachtenerstellung" },
   { icon: Users, text: "Vereinfachter Wartezimmeraufruf" },
+  { icon: FileCheck, text: "Eigens konfigurierbare Prüfung und Optimierung der Abrechnung" },
+  { icon: ClipboardCheck, text: "Hilfe bei der Dienstplanerstellung und Pflege" },
 ];
 
 const trustPoints = [
   { icon: Heart, text: "Entwickelt für den Einsatz im medizinischen Umfeld" },
   { icon: ClipboardCheck, text: "Berücksichtigung praxisrelevanter Workflows" },
-  { icon: Lightbulb, text: "Einsatz von KI" },
+  { icon: Lightbulb, text: "Einsatz von KI, datenschutzkonform auf deutschen Servern" },
   { icon: Shield, text: "Fokus auf Sicherheit, Stabilität und Erweiterbarkeit" },
 ];
 
@@ -145,6 +147,36 @@ export default function HomePage() {
                   <CheckCircle className="w-5 h-5 text-violet shrink-0 mt-0.5" />
                   <span className="text-midnight/70">
                     Digitale Patientenanmeldung per Self-Check-In
+                  </span>
+                </div>
+                <div className="flex items-start gap-3">
+                  <CheckCircle className="w-5 h-5 text-violet shrink-0 mt-0.5" />
+                  <span className="text-midnight/70">
+                    Aufrufsyste über Monitor im Wartezimmer
+                  </span>
+                </div>
+                <div className="flex items-start gap-3">
+                  <CheckCircle className="w-5 h-5 text-violet shrink-0 mt-0.5" />
+                  <span className="text-midnight/70">
+                    KI gestützte Sprechstundendokumentation
+                  </span>
+                </div>
+                <div className="flex items-start gap-3">
+                  <CheckCircle className="w-5 h-5 text-violet shrink-0 mt-0.5" />
+                  <span className="text-midnight/70">
+                    Gutachtenerstellung mit Hilfe von KI
+                  </span>
+                </div>
+                <div className="flex items-start gap-3">
+                  <CheckCircle className="w-5 h-5 text-violet shrink-0 mt-0.5" />
+                  <span className="text-midnight/70">
+                    Abrechnungs-Optimierung welche individuell anpassbar ist
+                  </span>
+                </div>
+                <div className="flex items-start gap-3">
+                  <CheckCircle className="w-5 h-5 text-violet shrink-0 mt-0.5" />
+                  <span className="text-midnight/70">
+                    Dienstplanerstellung und Management mit geringstem Aufwand
                   </span>
                 </div>
                 <div className="flex items-start gap-3">

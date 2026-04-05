@@ -13,12 +13,12 @@ const features = [
   {
     icon: Search,
     title: "Fehlende Ziffern erkennen",
-    description: "Das System prüft: Wurde eine Leistung dokumentiert, aber nicht abgerechnet? Fehlende Ziffern werden systematisch identifiziert.",
+    description: "Das System prüft: Wurde eine Leistung dokumentiert, aber nicht abgerechnet? Fehlende Ziffern werden systematisch identifiziert. Alles voll selbst konfigurierbar",
   },
   {
     icon: Calculator,
     title: "EBM, GOÄ und HZV",
-    description: "Unterstützung für alle relevanten Abrechnungssysteme — gesetzlich (EBM), privat (GOÄ) und Hausarztzentrierte Versorgung (HZV).",
+    description: "Unterstützung für alle relevanten Abrechnungssysteme — gesetzlich (EBM), privat (GOÄ) und Hausarztzentrierte Versorgung (HZV). Kataloge können nach eigenen Vorstellungen gepflegt werden",
   },
   {
     icon: BarChart3,

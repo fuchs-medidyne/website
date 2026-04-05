@@ -11,6 +11,14 @@ Planung und Weiterentwicklung werden auf der uebergeordneten Steuerungsebene koo
 Aktuelle Plaene und Roadmaps: `../Plaene/Website/`
 Bei Session-Start relevante Plaene pruefen falls vorhanden.
 
+## Session-Lifecycle
+
+| Skill | Wann | Was |
+|-------|------|-----|
+| `/session-start` | Session-Beginn (Pflicht) | Kontext laden, Git, Build-Status, Plaene |
+| `/checkpoint` | Zwischendurch (beliebig oft) | Doku pruefen, Build validieren, steuerung.db, Commit |
+| `/session-ende` | Session-Abschluss (Pflicht) | Checkpoint + Memory + Push + Report |
+
 ## Das Team
 
 Die Website hat ein eigenes Projekt-Team. Schnittstelle zur Steuerungsebene ist der Web-Leiter.

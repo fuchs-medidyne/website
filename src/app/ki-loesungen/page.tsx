@@ -18,13 +18,13 @@ import heroBg from "../../../public/images/hero_bg.png";
 export const metadata: Metadata = {
   title: "KI Lösungen",
   description:
-    "KI Lösungen für Arztpraxen — cloudbasierte Praxissoftware als Service mit hoher Verfügbarkeit, zentraler Wartung und stets aktueller Software.",
+    "KI Lösungen für Arztpraxen — datenschutzkonforme cloudbasierte Praxissoftware als Service mit hoher Verfügbarkeit, zentraler Wartung und stets aktueller Software. In Deutschland gehostet.",
 };
 
 const saasPoints = [
-  "Hohe Verfügbarkeit",
-  "Zentrale Wartung",
-  "Stets aktuelle Software",
+  "Hoher Verfügbarkeit",
+  "Zentraler Wartung",
+  "Stets aktueller Software",
 ];
 
 const modules = [
@@ -72,7 +72,7 @@ const modules = [
     icon: Calculator,
     title: "Abrechnungs-Optimierung",
     description:
-      "Wurde eine Leistung erbracht, aber nicht abgerechnet? Das System identifiziert systematisch fehlende Abrechnungsziffern — für EBM, GOÄ und HZV.",
+      "Wurde eine Leistung erbracht, aber nicht abgerechnet? Das System identifiziert systematisch fehlende Abrechnungsziffern — für EBM, GOÄ und HZV. Ausserdem kann gezielt nach Potentialen gesucht werden um in Zukunft noch effizienter zu arbeiten.",
     href: "/ki-loesungen/abrechnungs-optimierung",
     linkText: "Mehr zur Abrechnungs-Optimierung",
     placeholderType: "image" as const,
@@ -129,8 +129,8 @@ export default function KiLoesungenPage() {
                 Cloudbasierte Praxissoftware
               </h2>
               <p className="text-lg text-midnight/50 leading-relaxed mb-8">
-                Unsere Lösung wird als Software-as-a-Service (SaaS) bereitgestellt,
-                spezialisiert auf medizinische Einrichtungen. So profitieren Sie von:
+                Unsere Lösung wird als Software-as-a-Service (SaaS) auf deutschen Servern bereitgestellt,
+                spezialisiert auf medizinische Einrichtungen. So profitieren Sie datenschutzkonform von:
               </p>
             </div>
 

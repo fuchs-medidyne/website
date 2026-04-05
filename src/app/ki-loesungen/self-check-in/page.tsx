@@ -95,7 +95,7 @@ const techFeatures = [
       "Zentrales Backend zur Einstellung",
       "Praxisindividuelle Workflows",
       "Verwaltung mehrerer Terminals",
-      "Echtzeit-Monitoring und Statistiken",
+      "Echtzeit-Monitoring über Wartelisten und Kontingent-Kontrolle",
     ],
   },
   {
@@ -112,8 +112,8 @@ const techFeatures = [
 
 const hardwareSpecs = [
   { icon: Monitor, label: "Großformatiger Hochformat-Touchscreen" },
-  { icon: Wifi, label: "Integrierter Router mit SIM-Karte" },
-  { icon: Navigation, label: "GPS-basierter Diebstahlschutz" },
+  { icon: Wifi, label: "Integrierter Switch zur nahtlosen Integration ins Praxisnetz" },
+  { icon: Navigation, label: "Sauberes Design" },
   { icon: CreditCard, label: "Halterung für Kartenlesegerät (Cherry ST 1506)" },
   { icon: Volume2, label: "Integrierte Soundbar" },
   { icon: Anchor, label: "Stabile Bodenmontage" },
