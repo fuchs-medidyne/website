@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 import {
   Cloud,
   ArrowRight,
@@ -14,6 +15,12 @@ import {
   CalendarDays,
 } from "lucide-react";
 import heroBg from "../../../public/images/hero_bg.png";
+import terminal4 from "../../../public/images/terminal_4.jpeg";
+import sprechstundeDoku from "../../../public/images/website_sprechstundedoku.jpg";
+import wartezimmer from "../../../public/images/wartezimmer.jpg";
+import gutachten from "../../../public/images/gutachten.jpg";
+import abrechnung from "../../../public/images/abrechnung.jpg";
+import dienstplan from "../../../public/images/dienstplan.jpg";
 
 export const metadata: Metadata = {
   title: "KI Lösungen",
@@ -35,8 +42,9 @@ const modules = [
       "Digitale Patientenanmeldung via Touchscreen-Terminal. Individualisierbare Check-In-Prozesse, Entlastung des Empfangsteams und optimierte Patientenführung.",
     href: "/ki-loesungen/self-check-in",
     linkText: "Weitere Details zum Terminal",
-    placeholderType: "video" as const,
-    placeholderLabel: "Self-Check-In Demo",
+    placeholderType: "image" as const,
+    placeholderLabel: "Self-Check-In Terminal",
+    image: terminal4,
   },
   {
     icon: Users,
@@ -47,6 +55,7 @@ const modules = [
     linkText: "Mehr zum Patienten-Aufruf",
     placeholderType: "image" as const,
     placeholderLabel: "Patienten-Aufruf",
+    image: wartezimmer,
   },
   {
     icon: Mic,
@@ -55,8 +64,9 @@ const modules = [
       "Widmen Sie sich voll und ganz Ihrem Patienten. Das Arzt-Patienten-Gespräch wird KI-gestützt erfasst und automatisch in eine strukturierte Dokumentation überführt.",
     href: "/ki-loesungen/sprechstunden-doku",
     linkText: "Mehr zur Sprechstunden-Doku",
-    placeholderType: "video" as const,
-    placeholderLabel: "Arzt-Patientengespräch Demo",
+    placeholderType: "image" as const,
+    placeholderLabel: "Sprechstunden-Dokumentation",
+    image: sprechstundeDoku,
   },
   {
     icon: FileCheck,
@@ -67,6 +77,7 @@ const modules = [
     linkText: "Mehr zur Gutachten-Erstellung",
     placeholderType: "image" as const,
     placeholderLabel: "Gutachten-Erstellung",
+    image: gutachten,
   },
   {
     icon: Calculator,
@@ -77,6 +88,7 @@ const modules = [
     linkText: "Mehr zur Abrechnungs-Optimierung",
     placeholderType: "image" as const,
     placeholderLabel: "Abrechnungs-Optimierung",
+    image: abrechnung,
   },
   {
     icon: CalendarDays,
@@ -87,6 +99,7 @@ const modules = [
     linkText: "Mehr zur Dienstplanung",
     placeholderType: "image" as const,
     placeholderLabel: "Dienstplanung",
+    image: dienstplan,
   },
 ];
 
@@ -168,21 +181,24 @@ export default function KiLoesungenPage() {
                   index % 2 === 1 ? "lg:[direction:rtl]" : ""
                 }`}
               >
-                {/* Platzhalter */}
+                {/* Bild oder Platzhalter */}
                 <div className="relative aspect-video rounded-2xl bg-gradient-to-br from-abyss to-midnight flex items-center justify-center overflow-hidden border border-violet/10 lg:[direction:ltr]">
-                  <div className="absolute inset-0 bg-midnight/60 flex flex-col items-center justify-center gap-4">
-                    <div className="w-16 h-16 rounded-full bg-violet/20 flex items-center justify-center">
-                      {mod.placeholderType === "video" ? (
-                        <Play className="w-8 h-8 text-violet fill-violet/30" />
-                      ) : (
+                  {"image" in mod && mod.image ? (
+                    <Image
+                      src={mod.image}
+                      alt={mod.title}
+                      fill
+                      className="object-cover"
+                    />
+                  ) : (
+                    <div className="absolute inset-0 bg-midnight/60 flex flex-col items-center justify-center gap-4">
+                      <div className="w-16 h-16 rounded-full bg-violet/20 flex items-center justify-center">
                         <ImageIcon className="w-8 h-8 text-violet" />
-                      )}
+                      </div>
+                      <p className="text-white/50 text-sm font-medium">Bild-Platzhalter</p>
+                      <p className="text-white/30 text-xs">{mod.placeholderLabel}</p>
                     </div>
-                    <p className="text-white/50 text-sm font-medium">
-                      {mod.placeholderType === "video" ? "Video" : "Bild"}-Platzhalter
-                    </p>
-                    <p className="text-white/30 text-xs">{mod.placeholderLabel}</p>
-                  </div>
+                  )}
                 </div>
 
                 {/* Beschreibung */}

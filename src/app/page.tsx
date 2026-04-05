@@ -17,6 +17,7 @@ import {
   Lightbulb,
 } from "lucide-react";
 import heroBg from "../../public/images/hero_bg.png";
+import automationImg from "../../public/images/automation.jpg";
 
 const efficiencyPoints = [
   "Optimierung der Praxisabläufe durch Software und KI-Technologie",
@@ -198,8 +199,8 @@ export default function HomePage() {
 
             <div className="relative rounded-2xl overflow-hidden">
               <Image
-                src="https://placehold.co/700x500/0F2A33/4DA3B5?text=Bild%3A+Moderne+Arztpraxis+mit+EmMa+Terminal"
-                alt="Moderne Arztpraxis mit EmMa Terminal am Empfang"
+                src={automationImg}
+                alt="KI-gestützte Automatisierung in der Arztpraxis"
                 width={700}
                 height={500}
                 className="w-full h-auto object-cover rounded-2xl"
