@@ -39,7 +39,6 @@ export default function Footer() {
                 { label: "Startseite", href: "/" },
                 { label: "Philosophie", href: "/philosophie" },
                 { label: "KI Lösungen", href: "/ki-loesungen" },
-                { label: "Self-Check-In Terminal", href: "/ki-loesungen/self-check-in" },
                 { label: "Kontakt", href: "/kontakt" },
               ].map((link) => (
                 <li key={link.href}>
