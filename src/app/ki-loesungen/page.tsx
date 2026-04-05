@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { Cloud, ArrowRight, CheckCircle } from "lucide-react";
+import { Cloud, ArrowRight, CheckCircle, Play } from "lucide-react";
 import heroBg from "../../../public/images/hero_bg.png";
 
 export const metadata: Metadata = {
@@ -84,6 +84,86 @@ export default function KiLoesungenPage() {
                   </span>
                 </div>
               ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ─── Funktionen im Überblick ─── */}
+      <section className="py-16 lg:py-20 bg-white">
+        <div className="mx-auto max-w-7xl px-6 lg:px-8">
+          <div className="text-center mb-14">
+            <h2 className="font-display text-2xl lg:text-3xl tracking-tight text-midnight">
+              Funktionen im Überblick
+            </h2>
+          </div>
+
+          {/* Video 1: Self-Check-In */}
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-16">
+            <div className="relative aspect-video rounded-2xl bg-gradient-to-br from-abyss to-midnight flex items-center justify-center overflow-hidden border border-violet/10">
+              <div className="absolute inset-0 bg-midnight/60 flex flex-col items-center justify-center gap-4">
+                <div className="w-16 h-16 rounded-full bg-violet/20 flex items-center justify-center">
+                  <Play className="w-8 h-8 text-violet fill-violet/30" />
+                </div>
+                <p className="text-white/50 text-sm font-medium">Video-Platzhalter</p>
+                <p className="text-white/30 text-xs">Self-Check-In Demo</p>
+              </div>
+            </div>
+
+            <div>
+              <h3 className="font-display text-xl lg:text-2xl tracking-tight text-midnight mb-4">
+                Self-Check-In für Patienten
+              </h3>
+              <ul className="space-y-3 mb-6">
+                <li className="flex items-start gap-3">
+                  <CheckCircle className="w-5 h-5 text-violet shrink-0 mt-0.5" />
+                  <span className="text-midnight/60">Digitale Anmeldung über cloudbasierte Terminals</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <CheckCircle className="w-5 h-5 text-violet shrink-0 mt-0.5" />
+                  <span className="text-midnight/60">Individuell definierbare Prozesse für den Check-In</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <CheckCircle className="w-5 h-5 text-violet shrink-0 mt-0.5" />
+                  <span className="text-midnight/60">Entlastung des Empfangspersonals</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <CheckCircle className="w-5 h-5 text-violet shrink-0 mt-0.5" />
+                  <span className="text-midnight/60">Verbesserte Patientenführung</span>
+                </li>
+              </ul>
+              <Link
+                href="/ki-loesungen/self-check-in"
+                className="group inline-flex items-center gap-2 bg-violet hover:bg-iris text-white px-6 py-3 rounded-full font-semibold transition-all duration-300 hover:shadow-[0_0_24px_rgba(46,125,142,0.4)]"
+              >
+                Weitere Details zum Terminal
+                <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
+              </Link>
+            </div>
+          </div>
+
+          {/* Video 2: Arzt-Patientengespräch */}
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div className="relative aspect-video rounded-2xl bg-gradient-to-br from-abyss to-midnight flex items-center justify-center overflow-hidden border border-violet/10">
+              <div className="absolute inset-0 bg-midnight/60 flex flex-col items-center justify-center gap-4">
+                <div className="w-16 h-16 rounded-full bg-violet/20 flex items-center justify-center">
+                  <Play className="w-8 h-8 text-violet fill-violet/30" />
+                </div>
+                <p className="text-white/50 text-sm font-medium">Video-Platzhalter</p>
+                <p className="text-white/30 text-xs">Arzt-Patientengespräch Demo</p>
+              </div>
+            </div>
+
+            <div>
+              <h3 className="font-display text-xl lg:text-2xl tracking-tight text-midnight mb-4">
+                Arzt-Patientengespräch
+              </h3>
+              <p className="text-midnight/60 leading-relaxed mb-6">
+                Widmen Sie sich in Ihren Sprechstunden voll und ganz Ihrem
+                Patienten. Wir unterstützen Sie bei der Dokumentation und dem
+                Erstellen von Berichten oder Gutachten und minimieren Sie so
+                den zeitlichen Aufwand.
+              </p>
             </div>
           </div>
         </div>
