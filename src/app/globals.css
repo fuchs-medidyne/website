@@ -44,6 +44,10 @@ body {
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
   border-radius: 1rem;
+  height: 140px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 /* Module subpage hero backdrop — subtle mauve tint */
@@ -53,6 +57,10 @@ body {
   -webkit-backdrop-filter: blur(8px);
   border-radius: 1rem;
   border: 1px solid rgba(142, 107, 135, 0.12);
+  height: 140px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 /* Module hero label — white glow for contrast */
