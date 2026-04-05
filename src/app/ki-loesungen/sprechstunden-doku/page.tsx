@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { ArrowRight, FileText, Mic, Brain, ShieldCheck, Clock } from "lucide-react";
+import heroBg from "../../../../public/images/hero_bg.png";
 
 export const metadata: Metadata = {
   title: "Sprechstunden-Dokumentation",
@@ -39,22 +40,25 @@ const features = [
 export default function SprechstundenDokuPage() {
   return (
     <>
-      <section className="relative pt-28 pb-14 bg-gradient-to-br from-midnight via-void to-abyss overflow-hidden">
-        <div className="absolute inset-0 dot-grid opacity-40" />
-        <div className="relative z-10 mx-auto max-w-7xl px-6 lg:px-8 text-center">
-          <div className="max-w-3xl mx-auto">
-            <p className="text-sm font-semibold uppercase tracking-widest text-violet mb-4">EmMa Modul</p>
-            <h1 className="font-display text-3xl lg:text-4xl tracking-tight text-white mb-6">
+      <section className="relative h-[35vh] min-h-[280px] flex items-center overflow-hidden">
+        <div className="absolute inset-0 bg-cover bg-center" style={{ backgroundImage: `url('${heroBg.src}')` }} />
+        <div className="absolute inset-0 bg-midnight/40" />
+
+        <div className="relative z-10 mx-auto max-w-7xl px-6 lg:px-8 pt-20 pb-8 w-full text-center">
+          <div className="hero-backdrop px-8 py-6">
+            <p className="text-sm font-semibold uppercase tracking-widest text-white/80 mb-4">EmMa Modul</p>
+            <h1 className="font-display text-2xl lg:text-3xl tracking-tight text-white mb-4">
               Sprechstunden-Dokumentation
             </h1>
-            <p className="text-lg text-white/50 leading-relaxed max-w-2xl mx-auto">
+            <p className="text-base text-white/70 leading-relaxed max-w-2xl mx-auto">
               Konzentrieren Sie sich voll auf Ihre Patienten — die Dokumentation übernimmt EmMa.
               Das Arzt-Patienten-Gespräch wird KI-gestützt erfasst und automatisch in eine
               strukturierte Dokumentation überführt.
             </p>
           </div>
         </div>
-        <div className="absolute bottom-0 left-0 right-0 h-20 bg-gradient-to-t from-white to-transparent" />
+
+        <div className="absolute bottom-0 left-0 right-0 h-20 bg-gradient-to-t from-snow to-transparent" />
       </section>
 
       <section className="py-14 bg-white">
