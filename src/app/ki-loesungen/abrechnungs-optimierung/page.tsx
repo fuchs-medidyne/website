@@ -45,7 +45,7 @@ const features = [
 export default function AbrechnungsOptimierungPage() {
   return (
     <>
-      <section className="relative overflow-hidden">
+      <section className="relative h-[28vh] min-h-[220px] overflow-hidden">
         <div className="absolute inset-0 bg-cover bg-center" style={{ backgroundImage: `url('${heroBg.src}')` }} />
         <div className="absolute inset-0 bg-midnight/40" />
 
