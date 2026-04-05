@@ -9,7 +9,6 @@ import logoMedidyne from "../../public/images/logo_medidyne.png";
 const navItems = [
   { label: "Startseite", href: "/" },
   { label: "Philosophie", href: "/philosophie" },
-  { label: "Über uns", href: "/ueber-uns" },
   {
     label: "KI Lösungen",
     href: "/ki-loesungen",

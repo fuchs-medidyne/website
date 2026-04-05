@@ -6,6 +6,9 @@ import {
   Stethoscope,
   UserCheck,
   Workflow,
+  Heart,
+  Users,
+  TrendingUp,
 } from "lucide-react";
 import heroBg from "../../../public/images/hero_bg.png";
 
@@ -51,6 +54,27 @@ const perspectives = [
     icon: Workflow,
     label: "Für die gesamte Praxis",
     text: "Eine Plattform, ein Login, ein System. Alle Module greifen ineinander — vom Check-In über die Behandlung bis zur Abrechnung. Keine Insellösungen, keine fehlenden Schnittstellen.",
+  },
+];
+
+const values = [
+  {
+    icon: Heart,
+    title: "Patienten im Fokus",
+    description:
+      "Jede Lösung, die wir entwickeln, hat ein Ziel: die Versorgungsqualität für Patienten nachhaltig zu verbessern.",
+  },
+  {
+    icon: Users,
+    title: "Praxisnah entwickelt",
+    description:
+      "Unsere Produkte entstehen in enger Zusammenarbeit mit Arztpraxen — basierend auf echtem Feedback aus dem Alltag.",
+  },
+  {
+    icon: TrendingUp,
+    title: "Kontinuierlich besser",
+    description:
+      "Wir entwickeln unsere Lösungen stetig weiter, um den sich wandelnden Anforderungen des Gesundheitswesens gerecht zu werden.",
   },
 ];
 
@@ -163,17 +187,54 @@ export default function PhilosophiePage() {
         </div>
       </section>
 
+      {/* ─── Unsere Werte ─── */}
+      <section className="py-16 lg:py-20 bg-white">
+        <div className="mx-auto max-w-7xl px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <p className="text-sm font-semibold uppercase tracking-widest text-violet mb-3">
+              Unsere Werte
+            </p>
+            <h2 className="font-display text-2xl lg:text-3xl tracking-tight text-midnight">
+              Woran wir glauben
+            </h2>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {values.map((value) => (
+              <div
+                key={value.title}
+                className="p-8 rounded-2xl bg-snow border border-violet/5 hover:shadow-xl hover:shadow-violet/5 transition-all duration-500"
+              >
+                <div className="w-12 h-12 rounded-xl bg-violet/8 flex items-center justify-center mb-6">
+                  <value.icon className="w-6 h-6 text-violet" />
+                </div>
+                <h3 className="text-lg font-semibold text-midnight mb-3">
+                  {value.title}
+                </h3>
+                <p className="text-sm text-midnight/55 leading-relaxed">
+                  {value.description}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* ─── Abschluss ─── */}
       <section className="py-16 lg:py-20 bg-snow">
         <div className="mx-auto max-w-3xl px-6 lg:px-8 text-center">
           <h2 className="font-display text-2xl lg:text-3xl tracking-tight text-midnight mb-6">
             Ein System, das mitwächst
           </h2>
+          <p className="text-lg text-midnight/55 leading-relaxed mb-6">
+            Unser Anspruch ist es, eine nachhaltige und zukunftsfähige
+            SaaS-Lösung für Arztpraxen bereitzustellen. Kontinuierliche
+            Weiterentwicklung ist strategischer Bestandteil unserer Arbeit.
+          </p>
           <p className="text-lg text-midnight/55 leading-relaxed">
-            EmMa wird kontinuierlich weiterentwickelt — in enger Zusammenarbeit
-            mit Arztpraxen, basierend auf echtem Feedback aus dem Alltag. Jede
-            Funktion, die wir ergänzen, folgt demselben Prinzip: den Praxisalltag
-            einfacher machen, nicht komplizierter.
+            Regelmäßig arbeiten wir Praxis-Feedback in neue Funktionen und
+            Verbesserungen ein — so entstehen Lösungen, die den realen
+            Bedürfnissen im medizinischen Alltag gerecht werden.
           </p>
         </div>
       </section>
