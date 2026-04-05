@@ -60,8 +60,8 @@ body {
   text-shadow: 0 1px 4px rgba(9, 26, 31, 0.6), 0 0 12px rgba(9, 26, 31, 0.3);
 }
 
-/* Module hero title — strong contrast */
-.module-title {
+/* Hero title — strong contrast against background image */
+.hero-title-shadow {
   text-shadow: 0 2px 8px rgba(9, 26, 31, 0.5);
 }
 

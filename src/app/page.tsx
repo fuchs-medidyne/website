@@ -79,7 +79,7 @@ export default function HomePage() {
         <div className="relative z-10 mx-auto max-w-7xl px-6 lg:px-8 pt-28 pb-16 w-full">
           <div className="hero-backdrop px-8 py-8">
             <div className="max-w-5xl mx-auto text-center mb-8">
-              <h1 className="font-display text-3xl sm:text-4xl lg:text-5xl leading-[1.15] tracking-tight text-white mb-5">
+              <h1 className="hero-title-shadow font-display text-3xl sm:text-4xl lg:text-5xl leading-[1.15] tracking-tight text-white mb-5">
                 Prozessdigitalisierung und Automatisierung
                 für moderne Arztpraxen
               </h1>
