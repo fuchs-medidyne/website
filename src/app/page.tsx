@@ -68,7 +68,7 @@ export default function HomePage() {
   return (
     <>
       {/* ─── Hero ─── */}
-      <section className="relative h-[35vh] min-h-[280px] flex items-center overflow-hidden">
+      <section className="relative overflow-hidden">
         <div
           className="absolute inset-0 bg-cover bg-center"
           style={{ backgroundImage: `url('${heroBg.src}')` }}
@@ -76,9 +76,9 @@ export default function HomePage() {
         <div className="absolute inset-0 bg-midnight/40" />
         <div className="absolute inset-0 bg-gradient-to-b from-white/10 via-transparent to-white/20" />
 
-        <div className="relative z-10 mx-auto max-w-7xl px-6 lg:px-8 pt-28 pb-16 w-full">
+        <div className="relative z-10 mx-auto max-w-7xl px-6 lg:px-8 pt-24 pb-12 w-full">
           <div className="hero-backdrop px-8 py-8">
-            <div className="max-w-5xl mx-auto text-center mb-8">
+            <div className="max-w-5xl mx-auto text-center">
               <h1 className="hero-title-shadow font-display text-3xl sm:text-4xl lg:text-5xl leading-[1.15] tracking-tight text-white mb-5">
                 Prozessdigitalisierung und Automatisierung
                 für moderne Arztpraxen
@@ -89,28 +89,32 @@ export default function HomePage() {
                 schaffen Sie Zeit für wertschöpfende Aufgaben.
               </p>
             </div>
-
-            {/* Feature-Punkte */}
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
-              {[
-                { title: "Effizienz steigern", desc: "Optimierung der Praxisabläufe durch KI-Technologie" },
-                { title: "Innovative Lösungen", desc: "Verbesserung der Patientenversorgung durch automatisierte Prozesse" },
-                { title: "KI-gestützte Automatisierung", desc: "Entlastung für Ärzte und medizinisches Fachpersonal" },
-              ].map((item) => (
-                <div key={item.title} className="text-center">
-                  <h3 className="text-lg font-semibold text-white mb-2">
-                    {item.title}
-                  </h3>
-                  <p className="text-sm text-white/60 leading-relaxed">
-                    {item.desc}
-                  </p>
-                </div>
-              ))}
-            </div>
           </div>
         </div>
 
         <div className="absolute bottom-0 left-0 right-0 h-20 bg-gradient-to-t from-white to-transparent" />
+      </section>
+
+      {/* ─── Drei Säulen ─── */}
+      <section className="py-12 bg-white">
+        <div className="mx-auto max-w-5xl px-6 lg:px-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {[
+              { title: "Effizienz steigern", desc: "Optimierung der Praxisabläufe durch KI-Technologie" },
+              { title: "Innovative Lösungen", desc: "Verbesserung der Patientenversorgung durch automatisierte Prozesse" },
+              { title: "KI-gestützte Automatisierung", desc: "Entlastung für Ärzte und medizinisches Fachpersonal" },
+            ].map((item) => (
+              <div key={item.title} className="text-center p-6 rounded-xl bg-snow border border-violet/5">
+                <h3 className="text-lg font-semibold text-midnight mb-2">
+                  {item.title}
+                </h3>
+                <p className="text-sm text-midnight/55 leading-relaxed">
+                  {item.desc}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
       </section>
 
       {/* ─── KI-gestützte Automatisierung ─── */}
