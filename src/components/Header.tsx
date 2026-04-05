@@ -14,6 +14,11 @@ const navItems = [
     href: "/ki-loesungen",
     children: [
       { label: "Self-Check-In Terminal", href: "/ki-loesungen/self-check-in" },
+      { label: "Patienten-Aufruf", href: "/ki-loesungen/patienten-aufruf" },
+      { label: "Sprechstunden-Dokumentation", href: "/ki-loesungen/sprechstunden-doku" },
+      { label: "Gutachten-Erstellung", href: "/ki-loesungen/gutachten-erstellung" },
+      { label: "Abrechnungs-Optimierung", href: "/ki-loesungen/abrechnungs-optimierung" },
+      { label: "Dienstplanung", href: "/ki-loesungen/dienstplanung" },
     ],
   },
 ];
