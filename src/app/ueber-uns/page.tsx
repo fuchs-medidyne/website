@@ -130,7 +130,7 @@ export default function UeberUnsPage() {
       </section>
 
       {/* ─── Unternehmensbild ─── */}
-      <section className="bg-snow">
+      <section className="pb-16 lg:pb-20 bg-snow">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="relative rounded-2xl overflow-hidden">
             <Image
