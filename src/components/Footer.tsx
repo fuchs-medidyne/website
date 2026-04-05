@@ -37,6 +37,7 @@ export default function Footer() {
             <ul className="space-y-3">
               {[
                 { label: "Startseite", href: "/" },
+                { label: "Philosophie", href: "/philosophie" },
                 { label: "Über uns", href: "/ueber-uns" },
                 { label: "KI Lösungen", href: "/ki-loesungen" },
                 { label: "Self-Check-In Terminal", href: "/ki-loesungen/self-check-in" },
