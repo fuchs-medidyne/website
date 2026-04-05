@@ -55,6 +55,16 @@ body {
   border: 1px solid rgba(142, 107, 135, 0.12);
 }
 
+/* Module hero label — readable on any backdrop */
+.module-label {
+  text-shadow: 0 1px 4px rgba(9, 26, 31, 0.6), 0 0 12px rgba(9, 26, 31, 0.3);
+}
+
+/* Module hero title — strong contrast */
+.module-title {
+  text-shadow: 0 2px 8px rgba(9, 26, 31, 0.5);
+}
+
 /* Gradient text utility */
 .gradient-text {
   background: linear-gradient(135deg, #B8DCE5 0%, #4DA3B5 40%, #8E6B87 100%);

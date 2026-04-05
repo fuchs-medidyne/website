@@ -129,10 +129,10 @@ export default function SelfCheckInPage() {
 
         <div className="relative z-10 mx-auto max-w-7xl px-6 lg:px-8 pt-20 pb-8 w-full text-center">
           <div className="hero-backdrop-module px-8 py-6">
-            <p className="text-sm font-semibold uppercase tracking-widest text-mauve-light mb-4">
+            <p className="module-label text-base font-semibold uppercase tracking-widest text-mauve-light mb-4">
               EmMa Modul
             </p>
-            <h1 className="font-display text-2xl lg:text-3xl tracking-tight text-white mb-4">
+            <h1 className="module-title font-display text-3xl lg:text-5xl tracking-tight text-white mb-4">
               Self-Check-In Terminal für Patienten
             </h1>
             <p className="text-base text-white/70 leading-relaxed max-w-2xl mx-auto">
