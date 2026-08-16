@@ -12,6 +12,8 @@ export const metadata: Metadata = {
 };
 
 // Geplante Erweiterungen bestehender Module (keine eigenen Module — daher nicht in modules.ts).
+// Konvention: pro Modul genau EINE Kachel. Mehrere geplante Funktionen desselben Moduls
+// gehören in denselben Eintrag, nicht in zwei nebeneinanderliegende Kacheln.
 const plannedFeatures = [
   {
     module: "Kommunikation",
@@ -19,23 +21,15 @@ const plannedFeatures = [
   },
   {
     module: "Schreibplatz",
-    text: "Amtliche Formulare direkt ausfüllen, statt sie als strukturierten Text auszugeben.",
+    text: "Amtliche Formulare direkt ausfüllen, statt sie als strukturierten Text auszugeben. Dazu ein gemeinsames Adressbuch für wiederkehrende Empfänger — Adresse und Anrede werden automatisch übernommen.",
   },
   {
-    module: "Schreibplatz",
-    text: "Gemeinsames Adressbuch für wiederkehrende Empfänger — Adresse und Anrede werden automatisch übernommen.",
-  },
-  {
-    module: "Patienten-Aufruf",
-    text: "Aufrufe zimmergenau an den richtigen Arbeitsplatz zustellen statt an alle.",
+    module: "Self-Check-In · Patienten-Aufruf",
+    text: "Mehrere Terminals und Wartezimmer je Standort getrennt verwalten — und einen Aufruf gezielt an ein bestimmtes Wartezimmer schicken statt an alle.",
   },
   {
     module: "Sprechstunden-Dokumentation",
     text: "Aufnahmen vom Praxis-Mikrofon laden sich selbstständig hoch — ohne Zwischenschritt am Rechner.",
-  },
-  {
-    module: "Self-Check-In · Patienten-Aufruf",
-    text: "Mehrere Terminals und Aufruf-Bildschirme je Standort getrennt verwalten.",
   },
   {
     module: "Dokumenten-Management",
@@ -43,11 +37,7 @@ const plannedFeatures = [
   },
   {
     module: "Abrechnungs-Optimierung",
-    text: "Prüfzeiten aus dem KBV-Stammdatensatz, damit die Plausibilitätsprüfung nach §106d vollständig greift.",
-  },
-  {
-    module: "Abrechnungs-Optimierung",
-    text: "Zweite Datenquelle für Fälle und Freitexte, die in der KVDT-Datei nicht enthalten sind.",
+    text: "Prüfzeiten aus dem KBV-Stammdatensatz, damit die Plausibilitätsprüfung nach §106d vollständig greift. Dazu eine zweite Datenquelle für Fälle und Freitexte, die in der KVDT-Datei nicht enthalten sind.",
   },
   {
     module: "Alle Module",
