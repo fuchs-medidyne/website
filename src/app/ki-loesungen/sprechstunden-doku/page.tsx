@@ -1,6 +1,18 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { ArrowRight, FileText, Mic, Brain, ShieldCheck, Clock } from "lucide-react";
+import {
+  ArrowRight,
+  FileText,
+  Mic,
+  Brain,
+  ShieldCheck,
+  Clock,
+  Pill,
+  Smartphone,
+  Upload,
+  EyeOff,
+  Share2,
+} from "lucide-react";
 import heroBg from "../../../../public/images/hero_bg.png";
 
 export const metadata: Metadata = {
@@ -34,6 +46,31 @@ const features = [
     icon: Clock,
     title: "Zeitersparnis",
     description: "Deutliche Reduktion der Nachbereitungszeit pro Patient — mehr Zeit für die nächste Behandlung.",
+  },
+  {
+    icon: Pill,
+    title: "Medikationsplan",
+    description: "Diktieren Sie das Stichwort „Medikationsplan“, und die KI trägt die genannten Medikamente in eine editierbare Tabelle ein — als PDF exportierbar, unsichere Zeilen sind markiert.",
+  },
+  {
+    icon: Smartphone,
+    title: "Diktat vom Smartphone",
+    description: "Aufnahmen aus den Sprachmemos Ihres iPhones landen per Teilen-Funktion direkt in EmMa — ohne Anmeldung am PC. Der Zugang pro Gerät ist jederzeit widerrufbar.",
+  },
+  {
+    icon: Upload,
+    title: "Stapelverarbeitung",
+    description: "Mehrere Diktate auf einmal hochladen und im Hintergrund verarbeiten lassen — Sie arbeiten weiter, die Ergebnisse erscheinen nach und nach im Verlauf.",
+  },
+  {
+    icon: EyeOff,
+    title: "Vertraulich je Arzt",
+    description: "Jeder Arzt sieht ausschließlich seine eigenen Aufnahmen. Diktat, Transkript, Anamnese, Befund und Diagnose eines Kollegen bleiben für andere unsichtbar.",
+  },
+  {
+    icon: Share2,
+    title: "Übergabe ins Praxissystem",
+    description: "Die fertige Dokumentation wandert strukturiert in die Patientenakte Ihres Praxisverwaltungssystems — ohne Kopieren und Einfügen. Diese Anbindung wird derzeit in der Praxis erprobt.",
   },
 ];
 

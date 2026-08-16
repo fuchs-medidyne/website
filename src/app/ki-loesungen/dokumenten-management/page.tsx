@@ -1,34 +1,70 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { ArrowRight, FolderOpen, Search, Tag, ShieldCheck } from "lucide-react";
+import {
+  ArrowRight,
+  Inbox,
+  Search,
+  Tag,
+  ShieldCheck,
+  AlertCircle,
+  Printer,
+  Files,
+  Lock,
+  Trash2,
+} from "lucide-react";
 import heroBg from "../../../../public/images/hero_bg.png";
 
 export const metadata: Metadata = {
   title: "Dokumenten-Management",
   description:
-    "Zentrale Verwaltung und Organisation medizinischer Dokumente und Befunde.",
+    "Digitale Postmappe für eingehende Befunde und Berichte — automatisch kategorisiert, nach Dringlichkeit sortiert, per KI durchsuchbar.",
 };
 
 const features = [
   {
-    icon: FolderOpen,
-    title: "Zentrale Ablage",
-    description: "Alle Befunde, Berichte und Dokumente Ihrer Praxis an einem Ort — strukturiert und schnell auffindbar.",
+    icon: Inbox,
+    title: "Digitale Postmappe",
+    description: "Eingehende Befunde und Berichte laufen an einer Stelle zusammen. Jeder Arzt bekommt seine eigene Mappe — nach Wichtigkeit und Gelesen-Status sortiert, ohne dass etwas ausgeblendet wird.",
+  },
+  {
+    icon: AlertCircle,
+    title: "Dringlichkeit auf einen Blick",
+    description: "Jedes Dokument bekommt automatisch eine Einstufung, die Ihr Team mit einem Klick korrigieren kann. Ungelesene und eilige Vorgänge zeigt ein Zähler direkt in der Navigation.",
+  },
+  {
+    icon: Printer,
+    title: "Faxeingang ohne Papier",
+    description: "Ihr Faxgerät legt eingehende Sendungen direkt als PDF in EmMa ab, statt sie auszudrucken — von dort laufen sie durch dieselbe Zuordnung wie alle anderen Dokumente.",
   },
   {
     icon: Tag,
     title: "Kategorisierung",
-    description: "Ordnen Sie Dokumente nach Typ, Patient, Datum oder eigenen Kategorien — flexible Verschlagwortung inklusive.",
+    description: "Dokumente werden automatisch einer Kategorie zugeordnet. Wo es eindeutig sein muss, hinterlegen Sie feste Regeln, die vor der KI greifen.",
   },
   {
     icon: Search,
-    title: "Schnelle Suche",
-    description: "Finden Sie jedes Dokument in Sekunden über die Volltextsuche und intelligente Filteroptionen.",
+    title: "Suche, die versteht",
+    description: "Neben Freitext- und Filtersuche findet die KI-Suche inhaltlich passende Dokumente — auch wenn Sie nicht dieselben Worte verwenden wie das Schreiben.",
+  },
+  {
+    icon: Files,
+    title: "Mehrere auf einmal",
+    description: "Ganze Stapel per Drag & Drop hochladen. Jede Datei wird einzeln verarbeitet und zeigt ihren eigenen Status — ein Fehler stoppt die übrigen nicht.",
+  },
+  {
+    icon: Lock,
+    title: "Zugriff nach Kategorie",
+    description: "Wer für eine Kategorie nicht freigegeben ist, sieht deren Dokumente weder in der Liste noch in der Vorschau oder im Download.",
+  },
+  {
+    icon: Trash2,
+    title: "Keine Datenhalde",
+    description: "Dokumente werden nach 30 Tagen automatisch entfernt. EmMa ist der Weg in die Patientenakte, kein zweites Archiv daneben.",
   },
   {
     icon: ShieldCheck,
-    title: "DSGVO-konform",
-    description: "Sichere Speicherung mit Zugriffskontrollen und vollständiger Revisionsfähigkeit.",
+    title: "Nachvollziehbar",
+    description: "Weiterleitungen und Notizen werden protokolliert — jederzeit nachvollziehbar, wer ein Dokument wann an wen gegeben hat.",
   },
 ];
 
@@ -48,7 +84,7 @@ export default function DokumentenManagementPage() {
               Dokumenten-Management
             </h1>
             <p className="hero-text-shadow text-sm text-black leading-relaxed max-w-2xl mx-auto">
-              Zentrale, strukturierte Ablage für Praxis-Dokumente.
+              Digitale Postmappe für den Posteingang Ihrer Praxis.
             </p>
           </div>
         </div>
@@ -61,12 +97,12 @@ export default function DokumentenManagementPage() {
           <div className="text-center mb-10">
             <h2 className="font-display text-2xl lg:text-3xl tracking-tight text-midnight">Funktionen</h2>
             <p className="mt-4 text-base text-midnight/60 leading-relaxed max-w-2xl mx-auto">
-              Behalten Sie den Überblick über alle Befunde, Berichte und Dokumente Ihrer Praxis.
-              Das Dokumenten-Management-Modul bietet eine zentrale, strukturierte Ablage
-              mit schnellem Zugriff.
+              Befunde, Arztbriefe und Faxe erreichen Ihre Praxis auf vielen Wegen.
+              EmMa nimmt sie entgegen, ordnet sie zu und legt jedem Arzt genau das vor,
+              was er sehen muss — nach Dringlichkeit sortiert.
             </p>
           </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 max-w-3xl mx-auto">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {features.map((f) => (
               <div key={f.title} className="p-6 rounded-xl bg-snow border border-violet/5">
                 <div className="w-10 h-10 rounded-lg bg-violet/8 flex items-center justify-center mb-4">

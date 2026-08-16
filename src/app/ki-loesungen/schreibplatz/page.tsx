@@ -1,19 +1,30 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { ArrowRight, FileCheck, Upload, Brain, Layers, History } from "lucide-react";
+import {
+  ArrowRight,
+  FileCheck,
+  Upload,
+  Brain,
+  Layers,
+  History,
+  Sparkles,
+  Mic,
+  Mail,
+  Stamp,
+} from "lucide-react";
 import heroBg from "../../../../public/images/hero_bg.png";
 
 export const metadata: Metadata = {
-  title: "Gutachten-Erstellung",
+  title: "Schreibplatz",
   description:
-    "KI-unterstützte Erstellung medizinischer Gutachten, Atteste und Arztbriefe.",
+    "KI-unterstützte Erstellung medizinischer Schriftstücke — Gutachten, Arztbriefe, Atteste und Formulare aus einem Diktat.",
 };
 
 const features = [
   {
     icon: Upload,
-    title: "Multi-Format Upload",
-    description: "Laden Sie relevante Unterlagen in verschiedenen Formaten hoch — PDF, DOCX, Bilder und sogar Audiodateien.",
+    title: "Text, Audio und PDF",
+    description: "Den Auftrag tippen oder diktieren, Anfragen und Vorbefunde als PDF dazulegen — alles läuft in denselben Entwurf ein.",
   },
   {
     icon: Brain,
@@ -24,6 +35,26 @@ const features = [
     icon: Layers,
     title: "Verschiedene Kategorien",
     description: "Gutachten, Atteste und Arztbriefe — wählen Sie die passende Kategorie oder erstellen Sie eigene Vorlagen.",
+  },
+  {
+    icon: Sparkles,
+    title: "Erkennt selbst, was gebraucht wird",
+    description: "Sie müssen nichts vorsortieren: Aus Ihrem Auftrag und den beigelegten Unterlagen erkennt EmMa, ob ein Gutachten, ein Arztbrief, ein Attest oder ein Formular entstehen soll.",
+  },
+  {
+    icon: Mic,
+    title: "Auftrag diktieren",
+    description: "„Ich brauche ein Attest für … wegen …“ — sprechen statt tippen. Auch längere Diktate vom Aufnahmegerät oder Handy laufen im Hintergrund durch und kommen als sauberer Auftragstext zurück.",
+  },
+  {
+    icon: Mail,
+    title: "Arztbrief in Briefform",
+    description: "Empfänger und Betreff schlägt die KI aus Ihrem Auftrag vor, beides bleibt vor dem Export änderbar. Das PDF folgt der Briefform nach DIN 5008.",
+  },
+  {
+    icon: Stamp,
+    title: "Ihr Briefkopf",
+    description: "Eigene Briefköpfe mit Adressblock, Fußtext und Logo hinterlegen und je Schriftstück auswählen — oder schlicht ohne Kopf exportieren.",
   },
   {
     icon: FileCheck,
@@ -37,7 +68,7 @@ const features = [
   },
 ];
 
-export default function GutachtenErstellungPage() {
+export default function SchreibplatzPage() {
   return (
     <>
       <section className="relative h-[280px] overflow-hidden">
@@ -47,13 +78,13 @@ export default function GutachtenErstellungPage() {
         <div className="relative z-10 mx-auto max-w-7xl px-6 lg:px-8 pt-[4.5rem] pb-6 w-full text-center">
           <div className="hero-backdrop-module px-8 py-5">
             <p className="module-label text-base font-semibold uppercase tracking-widest text-white mb-3">
-              EmMa Modul · Gutachten
+              EmMa Modul · Schreibplatz
             </p>
             <h1 className="hero-title-shadow font-display text-2xl lg:text-4xl tracking-tight text-white mb-3">
-              Gutachten-Erstellung
+              Schreibplatz
             </h1>
             <p className="hero-text-shadow text-sm text-black leading-relaxed max-w-2xl mx-auto">
-              Medizinische Gutachten und Arztbriefe schneller mit KI.
+              Alle diktierten Schriftstücke der Praxis an einem Ort.
             </p>
           </div>
         </div>
@@ -66,9 +97,9 @@ export default function GutachtenErstellungPage() {
           <div className="text-center mb-10">
             <h2 className="font-display text-2xl lg:text-3xl tracking-tight text-midnight">Funktionen</h2>
             <p className="mt-4 text-base text-midnight/60 leading-relaxed max-w-2xl mx-auto">
-              Erstellen Sie medizinische Gutachten, Atteste und Arztbriefe schneller und präziser.
-              Laden Sie relevante Unterlagen hoch — die KI analysiert diese und erstellt einen
-              strukturierten Entwurf zur Nachbearbeitung.
+              Ein Ort für alle diktierten Schriftstücke — Gutachten, Arztbrief, Attest und
+              Formular. Auftrag sprechen oder tippen, Unterlagen dazulegen: Die KI erstellt
+              den Entwurf, Sie prüfen und geben frei.
             </p>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -88,7 +119,7 @@ export default function GutachtenErstellungPage() {
       <section className="py-14 bg-snow">
         <div className="mx-auto max-w-3xl px-6 text-center">
           <h2 className="font-display text-2xl tracking-tight text-midnight mb-4">Interesse?</h2>
-          <p className="text-base text-midnight/50 mb-8">Lassen Sie sich zeigen, wie die KI-gestützte Gutachten-Erstellung funktioniert.</p>
+          <p className="text-base text-midnight/50 mb-8">Lassen Sie sich zeigen, wie der KI-gestützte Schreibplatz funktioniert.</p>
           <Link href="/kontakt" className="group inline-flex items-center gap-2 bg-violet hover:bg-iris text-white px-7 py-3.5 rounded-full font-semibold transition-all duration-300 hover:shadow-[0_0_24px_rgba(46,125,142,0.3)]">
             Demo anfragen <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
           </Link>

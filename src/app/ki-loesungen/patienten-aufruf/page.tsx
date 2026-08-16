@@ -1,6 +1,15 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { ArrowRight, Users, Tv, Clock, LinkIcon, ListOrdered } from "lucide-react";
+import {
+  ArrowRight,
+  Tv,
+  LinkIcon,
+  Volume2,
+  UserPlus,
+  DoorOpen,
+  RefreshCw,
+  Film,
+} from "lucide-react";
 import heroBg from "../../../../public/images/hero_bg.png";
 
 export const metadata: Metadata = {
@@ -16,24 +25,34 @@ const features = [
     description: "Patienten werden über Bildschirme im Wartezimmer aufgerufen — organisiert, diskret und ohne lautes Rufen am Empfang.",
   },
   {
-    icon: Users,
-    title: "Virtuelles Wartezimmer",
-    description: "Echtzeit-Übersicht über alle wartenden Patienten mit Status, Wartezeit und zugewiesenem Behandlungszimmer.",
-  },
-  {
-    icon: ListOrdered,
-    title: "Priorisierung",
-    description: "Flexible Reihenfolge-Verwaltung mit automatischer Zuordnung nach Anmeldung und manueller Anpassung.",
-  },
-  {
-    icon: Clock,
-    title: "Wartezeiten-Management",
-    description: "Transparente Wartezeiten für Patienten und Überblick für das Praxisteam zur Optimierung des Ablaufs.",
-  },
-  {
     icon: LinkIcon,
     title: "Integration",
-    description: "Nahtlose Verbindung mit dem Self-Check-In Terminal — Patienten erscheinen nach der Anmeldung automatisch in der Warteliste.",
+    description: "Nahtlose Verbindung mit dem Self-Check-In Terminal — wer sich dort angemeldet hat, erscheint automatisch in der Liste der eingecheckten Patienten.",
+  },
+  {
+    icon: Volume2,
+    title: "Sprachansage",
+    description: "Zum Aufruf auf dem Bildschirm kommt eine gesprochene Ansage. Der Ansagetext lässt sich je Ziel hinterlegen, damit der Satz grammatisch stimmt — „ins Labor“, „zur Sonographie 1“.",
+  },
+  {
+    icon: UserPlus,
+    title: "Aufruf ohne Praxissystem",
+    description: "Patienten lassen sich auch direkt in EmMa aufrufen: Anrede, Name und Zielzimmer eintragen, fertig. Aufrufe aus Ihrem Praxissystem laufen unverändert daneben.",
+  },
+  {
+    icon: DoorOpen,
+    title: "Frei definierbare Ziele",
+    description: "Behandlungszimmer, Labor, EKG — Aufruf-Ziele legen Sie selbst an und sortieren sie per Drag & Drop. Je Ziel ist ein Kürzel hinterlegbar, auf das Ihr Praxissystem direkt auslösen kann.",
+  },
+  {
+    icon: RefreshCw,
+    title: "Läuft durch",
+    description: "Der Bildschirm erholt sich selbstständig von Netzausfällen und Updates und überspringt ein defektes Einzelmedium. Auch nach vielen Stunden Dauerbetrieb ist kein Neustart von Hand nötig.",
+  },
+  {
+    icon: Film,
+    title: "Eigene Inhalte",
+    description: "Zwischen den Aufrufen zeigt der Bildschirm Ihre eigenen Bilder und Filme — Reihenfolge per Drag & Drop, Formate werden schon beim Hochladen geprüft.",
   },
 ];
 

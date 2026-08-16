@@ -11,6 +11,50 @@ export const metadata: Metadata = {
     "Roadmap der EmMa-Plattform — was wir gerade bauen und welche Module als nächstes kommen.",
 };
 
+// Geplante Erweiterungen bestehender Module (keine eigenen Module — daher nicht in modules.ts).
+const plannedFeatures = [
+  {
+    module: "Kommunikation",
+    text: "Nachrichten an Patienten auch per SMS und Telefon, nicht nur per E-Mail.",
+  },
+  {
+    module: "Schreibplatz",
+    text: "Amtliche Formulare direkt ausfüllen, statt sie als strukturierten Text auszugeben.",
+  },
+  {
+    module: "Schreibplatz",
+    text: "Gemeinsames Adressbuch für wiederkehrende Empfänger — Adresse und Anrede werden automatisch übernommen.",
+  },
+  {
+    module: "Patienten-Aufruf",
+    text: "Aufrufe zimmergenau an den richtigen Arbeitsplatz zustellen statt an alle.",
+  },
+  {
+    module: "Sprechstunden-Dokumentation",
+    text: "Aufnahmen vom Praxis-Mikrofon laden sich selbstständig hoch — ohne Zwischenschritt am Rechner.",
+  },
+  {
+    module: "Self-Check-In · Patienten-Aufruf",
+    text: "Mehrere Terminals und Aufruf-Bildschirme je Standort getrennt verwalten.",
+  },
+  {
+    module: "Dokumenten-Management",
+    text: "Papier-Post scannen und digital stempeln — der komplette Posteingang in einem Lauf.",
+  },
+  {
+    module: "Abrechnungs-Optimierung",
+    text: "Prüfzeiten aus dem KBV-Stammdatensatz, damit die Plausibilitätsprüfung nach §106d vollständig greift.",
+  },
+  {
+    module: "Abrechnungs-Optimierung",
+    text: "Zweite Datenquelle für Fälle und Freitexte, die in der KVDT-Datei nicht enthalten sind.",
+  },
+  {
+    module: "Alle Module",
+    text: "Startseite, die sich jeder Mitarbeiter aus den für ihn freigegebenen Kacheln selbst zusammenstellt.",
+  },
+];
+
 export default function RoadmapPage() {
   return (
     <>
@@ -46,8 +90,8 @@ export default function RoadmapPage() {
               In Entwicklung
             </h2>
             <p className="mt-3 text-base text-midnight/55 max-w-2xl mx-auto">
-              An diesen Modulen arbeiten wir gerade. Sie sind noch nicht Teil der
-              ausgelieferten Basisfunktion.
+              An diesen Modulen arbeiten wir gerade. Sie sind teilweise schon weit
+              fortgeschritten, stehen den Praxen aber noch nicht zur Verfügung.
             </p>
           </div>
 
@@ -130,6 +174,37 @@ export default function RoadmapPage() {
               Weitere Module sind in Planung — die Roadmap wird laufend aktualisiert.
             </p>
           )}
+        </div>
+      </section>
+
+      {/* ─── Weitere geplante Funktionen ─── */}
+      <section className="py-16 lg:py-20 bg-white">
+        <div className="mx-auto max-w-5xl px-6 lg:px-8">
+          <div className="text-center mb-10">
+            <h2 className="font-display text-2xl lg:text-3xl tracking-tight text-midnight">
+              Weitere geplante Funktionen
+            </h2>
+            <p className="mt-3 text-base text-midnight/55 max-w-2xl mx-auto">
+              Erweiterungen bestehender Module, an denen wir als nächstes arbeiten.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            {plannedFeatures.map((feature) => (
+              <div
+                key={feature.text}
+                className="flex gap-3 p-5 rounded-xl bg-snow border border-iris/8"
+              >
+                <span className="mt-2 w-1.5 h-1.5 rounded-full bg-iris shrink-0" />
+                <div>
+                  <p className="text-xs uppercase tracking-wider text-midnight/35 mb-1">
+                    {feature.module}
+                  </p>
+                  <p className="text-sm text-midnight/60 leading-relaxed">{feature.text}</p>
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
       </section>
 

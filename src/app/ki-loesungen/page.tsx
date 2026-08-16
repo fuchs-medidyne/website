@@ -1,7 +1,19 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
-import { Cloud, ArrowRight, CheckCircle, ImageIcon, Wrench } from "lucide-react";
+import {
+  Cloud,
+  ArrowRight,
+  CheckCircle,
+  ImageIcon,
+  Wrench,
+  Plug,
+  UserCog,
+  KeyRound,
+  Building2,
+  Palette,
+  Smartphone,
+} from "lucide-react";
 import heroBg from "../../../public/images/hero_bg.png";
 import { availableModules, inDevelopmentModules } from "@/data/modules";
 import { StatusBadge } from "@/components/StatusBadge";
@@ -16,6 +28,48 @@ const saasPoints = [
   "Hoher Verfügbarkeit",
   "Zentraler Wartung",
   "Stets aktueller Software",
+];
+
+// Modulübergreifende Eigenschaften der Plattform. `inDevelopment` markiert Punkte,
+// die noch nicht ausgeliefert sind.
+const platformPoints = [
+  {
+    icon: Plug,
+    title: "Anbindung an Ihr Praxissystem",
+    description:
+      "Aufrufe und Patientennachrichten lösen Sie per Knopfdruck aus Ihrem Praxisverwaltungssystem aus. Die strukturierte Übergabe der Sprechstunden-Dokumentation in die Patientenakte wird derzeit in der Praxis erprobt.",
+  },
+  {
+    icon: UserCog,
+    title: "Rollen und Rechte",
+    description:
+      "Legen Sie eigene Rollen an und entscheiden Sie bis auf einzelne Bereiche hinunter, wer was sehen und ändern darf — vom Praxisinhaber bis zur Aushilfe.",
+  },
+  {
+    icon: KeyRound,
+    title: "Zwei-Faktor-Anmeldung",
+    description:
+      "Der Zugang lässt sich zusätzlich zum Passwort über einen Code aus der Authenticator-App absichern. Nach mehreren Fehlversuchen greift eine automatische Sperre.",
+  },
+  {
+    icon: Building2,
+    title: "Mehrere Standorte",
+    description:
+      "Führen Sie Zweigpraxen unter einem Dach: Niederlassungen werden an einer Stelle gepflegt, der aktive Standort ist im laufenden Betrieb umschaltbar.",
+  },
+  {
+    icon: Palette,
+    title: "Ihr Erscheinungsbild",
+    description:
+      "Praxislogo und Praxisfarbe prägen die Oberfläche. Jeder Mitarbeiter wählt zusätzlich zwischen hellem und dunklem Modus — die Wahl gilt auf jedem Gerät.",
+  },
+  {
+    icon: Smartphone,
+    title: "Als App installierbar",
+    description:
+      "EmMa lässt sich auf Handy und Rechner wie eine eigenständige App installieren — praktisch für alles, was man unterwegs kurz aufruft.",
+    inDevelopment: true,
+  },
 ];
 
 export default function KiLoesungenPage() {
@@ -146,9 +200,42 @@ export default function KiLoesungenPage() {
         </div>
       </section>
 
+      {/* ─── Für alle Module ─── */}
+      <section className="py-16 lg:py-20 bg-snow">
+        <div className="mx-auto max-w-7xl px-6 lg:px-8">
+          <div className="text-center mb-10">
+            <h2 className="font-display text-2xl lg:text-3xl tracking-tight text-midnight">
+              Für alle Module
+            </h2>
+            <p className="mt-3 text-base text-midnight/55 max-w-2xl mx-auto">
+              Eigenschaften, die unabhängig vom einzelnen Modul für die gesamte
+              Plattform gelten.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            {platformPoints.map((point) => (
+              <div
+                key={point.title}
+                className="p-6 rounded-xl bg-white border border-violet/5"
+              >
+                <div className="flex items-start justify-between gap-3 mb-4">
+                  <div className="w-10 h-10 rounded-lg bg-violet/8 flex items-center justify-center shrink-0">
+                    <point.icon className="w-5 h-5 text-violet" />
+                  </div>
+                  {point.inDevelopment && <StatusBadge status="in-development" size="sm" />}
+                </div>
+                <h3 className="text-lg font-semibold text-midnight mb-2">{point.title}</h3>
+                <p className="text-sm text-midnight/55 leading-relaxed">{point.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* ─── Ausblick: In Entwicklung ─── */}
       {inDevelopmentModules.length > 0 && (
-        <section className="py-16 lg:py-20 bg-snow">
+        <section className="py-16 lg:py-20 bg-white">
           <div className="mx-auto max-w-5xl px-6 lg:px-8">
             <div className="text-center mb-10">
               <div className="inline-flex items-center gap-2 mb-4 px-3 py-1.5 rounded-full bg-mauve/15 text-sm text-mauve font-medium">
@@ -159,8 +246,8 @@ export default function KiLoesungenPage() {
                 Module in Entwicklung
               </h2>
               <p className="text-base text-midnight/55 max-w-2xl mx-auto">
-                Diese Module bauen wir aktuell — sie sind noch nicht Teil der
-                Basisfunktion. Auf der Roadmap zeigen wir, woran wir gerade arbeiten
+                Diese Module bauen wir aktuell — sie stehen den Praxen noch nicht
+                zur Verfügung. Auf der Roadmap zeigen wir, woran wir gerade arbeiten
                 und was als nächstes kommt.
               </p>
             </div>
@@ -169,7 +256,7 @@ export default function KiLoesungenPage() {
               {inDevelopmentModules.map((mod) => (
                 <div
                   key={mod.slug}
-                  className="p-6 rounded-xl bg-white border border-mauve/10"
+                  className="p-6 rounded-xl bg-snow border border-mauve/10"
                 >
                   <div className="flex items-start justify-between gap-3 mb-3">
                     <div className="w-10 h-10 rounded-lg bg-mauve/10 flex items-center justify-center shrink-0">
